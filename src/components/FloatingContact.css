@@ -1,0 +1,349 @@
+/* Floating Contact Container */
+.floating-contacts {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* Main Toggle Button */
+.floating-contact-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 8px 15px;
+    position: relative;
+    overflow: hidden;
+    min-width: 50px;
+    height: 45px;
+    border: none;
+}
+
+/* WhatsApp Icon */
+.floating-contact-toggle .fa-whatsapp {
+    color: white;
+    font-size: 1.1rem;
+    margin-right: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Fast Respond Text */
+.fast-respond-text {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 1;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+}
+
+/* Close Icon */
+.floating-contact-toggle .fa-times {
+    color: white;
+    font-size: 1rem;
+    opacity: 0;
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.floating-contact-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+}
+
+.floating-contact-toggle:hover .fast-respond-text {
+    transform: translateX(-3px);
+}
+
+/* Active State */
+.floating-contacts.active .floating-contact-toggle {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    border-radius: 50%;
+    padding: 0;
+    width: 60px;
+    min-width: 60px;
+}
+
+.floating-contacts.active .floating-contact-toggle .fa-whatsapp {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0);
+    margin-right: 0;
+}
+
+.floating-contacts.active .floating-contact-toggle .fast-respond-text {
+    opacity: 0;
+    transform: translateX(20px);
+    margin-right: 0;
+}
+
+.floating-contacts.active .floating-contact-toggle .fa-times {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Contact Menu */
+.floating-contact-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.floating-contacts.active .floating-contact-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+/* Individual Contact Items */
+.floating-contact-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transform: scale(0);
+    animation: popIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Stagger Animation Delays */
+.floating-contacts.active .floating-contact-item:nth-child(1) { animation-delay: 0.1s; }
+.floating-contacts.active .floating-contact-item:nth-child(2) { animation-delay: 0.15s; }
+.floating-contacts.active .floating-contact-item:nth-child(3) { animation-delay: 0.2s; }
+.floating-contacts.active .floating-contact-item:nth-child(4) { animation-delay: 0.25s; }
+
+@keyframes popIn {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* WhatsApp */
+.floating-contact-item.whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.floating-contact-item.whatsapp:hover {
+    background: linear-gradient(135deg, #128C7E, #075E54);
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* LinkedIn */
+.floating-contact-item.linkedin {
+    background: linear-gradient(135deg, #0077B5, #005885);
+}
+
+.floating-contact-item.linkedin:hover {
+    background: linear-gradient(135deg, #005885, #004471);
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(0, 119, 181, 0.5);
+}
+
+/* YouTube */
+.floating-contact-item.youtube {
+    background: linear-gradient(135deg, #FF0000, #CC0000);
+}
+
+.floating-contact-item.youtube:hover {
+    background: linear-gradient(135deg, #CC0000, #990000);
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+}
+
+/* Email */
+.floating-contact-item.email {
+    background: linear-gradient(135deg, #EA4335, #D33B2C);
+}
+
+.floating-contact-item.email:hover {
+    background: linear-gradient(135deg, #D33B2C, #B52D20);
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(234, 67, 53, 0.5);
+}
+
+/* Tooltip */
+.floating-contact-item::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-contact-item::after {
+    content: '';
+    position: absolute;
+    right: 43px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.floating-contact-item:hover::before,
+.floating-contact-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Pulse Animation for Main Button */
+.floating-contact-toggle::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 30px;
+    border: 2px solid rgba(37, 211, 102, 0.6);
+    animation: pulse 2s infinite;
+    pointer-events: none;
+}
+
+.floating-contacts.active .floating-contact-toggle::after {
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .floating-contacts {
+        bottom: 15px;
+        right: 15px;
+        gap: 8px;
+    }
+    
+    .floating-contact-toggle {
+        padding: 6px 12px;
+        min-width: 45px;
+        height: 40px;
+    }
+    
+    .floating-contact-toggle .fa-whatsapp {
+        font-size: 1rem;
+    }
+    
+    .fast-respond-text {
+        font-size: 0.7rem;
+    }
+    
+    .floating-contact-item {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .floating-contact-item::before {
+        font-size: 11px;
+        padding: 6px 10px;
+        right: 40px;
+    }
+    
+    .floating-contact-item::after {
+        right: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-contacts {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .floating-contact-toggle {
+        padding: 6px 10px;
+        min-width: 40px;
+        height: 35px;
+    }
+    
+    .floating-contact-toggle .fa-whatsapp {
+        font-size: 0.9rem;
+    }
+    
+    .fast-respond-text {
+        font-size: 0.65rem;
+    }
+    
+    .floating-contact-item {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+    
+    .floating-contact-item::before {
+        right: 37px;
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    
+    .floating-contact-item::after {
+        right: 30px;
+    }
+}

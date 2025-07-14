@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Dwi Hery Purnomo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #1e40af;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .header .subtitle {
+            color: #4f46e5;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h2 {
+            color: #1e40af;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .section h3 {
+            color: #374151;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            padding: 8px;
+            background: #f8fafc;
+            border-radius: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .skill-category h4 {
+            color: #4f46e5;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 3px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .skill-list li:before {
+            content: "▸";
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #3b82f6;
+            background: #f8fafc;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .experience-title {
+            color: #1e40af;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .achievement-list li {
+            padding: 2px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .achievement-list li:before {
+            content: "✓";
+            color: #059669;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        .education-table th,
+        .education-table td {
+            border: 1px solid #d1d5db;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .education-table th {
+            background: #f3f4f6;
+            color: #374151;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background: #dbeafe;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 15px 0;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+            background: #f0f9ff;
+            border-radius: 8px;
+            border: 2px solid #bae6fd;
+        }
+        
+        .stat-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0369a1;
+        }
+        
+        .stat-label {
+            color: #374151;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 15px;
+                font-size: 12px;
+            }
+            
+            .section {
+                margin-bottom: 20px;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>DWI HERY PURNOMO, S.M</h1>
+        <div class="subtitle">Repair & Maintenance Expert | Supply Chain Management Expert | Data Analytics Specialist</div>
+    </div>
+
+    <div class="section">
+        <h2>CONTACT INFORMATION</h2>
+        <div class="contact-info">
+            <div class="contact-item"><strong>Email:</strong> dwihplanner@gmail.com</div>
+            <div class="contact-item"><strong>Mobile/WA:</strong> +6281385639122</div>
+            <div class="contact-item"><strong>Address:</strong> Jl. Tipar Cakung No.7B, RT.07/03 Cilincing, Sukapura JAKUT 14140</div>
+            <div class="contact-item"><strong>YouTube:</strong> www.youtube.com/@dwihpjavas</div>
+            <div class="contact-item"><strong>Born:</strong> Jakarta, June 28, 1981</div>
+            <div class="contact-item"><strong>Status:</strong> Married, 4 Children</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <div class="highlight">
+            <p>Experienced Repair & Maintenance Expert with <strong>25+ years</strong> in Supply Chain Management, Heavy Equipment Maintenance, and Business Intelligence. Started career in 1999 after graduating from STM Cikini. Father of 4 children, passionate about continuous learning and knowledge sharing through YouTube content creation with <strong>3,200+ subscribers</strong>.</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">3,200+</div>
+                <div class="stat-label">YouTube Subscribers</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Import Operations</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">1M+</div>
+                <div class="stat-label">YouTube Views</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>CORE COMPETENCIES</h2>
+        <div class="highlight">
+            <h3>Why Strong Computerized Skills?</h3>
+            <p>During my long career, computers have been my primary work tools. I believe that computerized solutions make every kind of job and human life easier and more efficient. That's why I continuously upgrade my computer skills as essential work tools. I can easily integrate all types of source data into databases and create hundreds of valuable reports for management using Power Query, and make desktop reports also visible to management or anyone with Android applications on mobile phones through Microsoft Power BI.</p>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Computerized Skills</h4>
+                <ul class="skill-list">
+                    <li>Microsoft Office Suite (Advanced)</li>
+                    <li>Power Query & Power Pivot (Expert Level)</li>
+                    <li>Microsoft Power BI (Business Intelligence)</li>
+                    <li>Microsoft Dynamics AX (ERP Application)</li>
+                    <li>Data Transformation & Integration</li>
+                    <li>Desktop & Mobile Reporting Applications</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Professional Expertise</h4>
+                <ul class="skill-list">
+                    <li>Repair & Maintenance Management (Heavy Equipment)</li>
+                    <li>Supply Chain Management & Procurement</li>
+                    <li>Import Operations (Master List, SKBPPN, SKBPPH)</li>
+                    <li>Expedition & Multi-modal Transportation</li>
+                    <li>RKAB Budgeting & ESDM Reporting</li>
+                    <li>Cost Control & Predictive Maintenance</li>
+                    <li>Inter-island & International Logistics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <table class="education-table">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Institution</th>
+                    <th>Degree/Program</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #dbeafe;">
+                    <td><strong>Current</strong></td>
+                    <td><strong>Universitas Terbuka</strong></td>
+                    <td><strong>S1 - Sistem Informasi (In Progress)</strong></td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Universitas Terbuka</td>
+                    <td>S1 - Ekonomi Manajemen</td>
+                </tr>
+                <tr>
+                    <td>1999</td>
+                    <td>STM Cikini Jakarta</td>
+                    <td>Technical High School - Electronics</td>
+                </tr>
+                <tr>
+                    <td>1996</td>
+                    <td>SMPN 230 Jakarta</td>
+                    <td>Junior High School</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        
+        <div class="experience-item">
+            <div class="experience-title">PLANNING & DEVELOPMENT | REPAIR & MAINTENANCE DEPARTMENT | PLANT DEPARTMENT</div>
+            <p><strong>Key Focus:</strong> Heavy Equipment Maintenance, Predictive Analytics, Cost Control, BACKLOG Programs</p>
+            <ul class="achievement-list">
+                <li>Utilized Power Pivot, Power Query, and Power BI to transform data into integrated cost controlling reports</li>
+                <li>Implemented Predictive Maintenance strategies to maximize equipment uptime and reduce operational costs</li>
+                <li>Developed and managed BACKLOG Programs for systematic maintenance planning</li>
+                <li>Created automated reporting systems connecting hundreds of data sources for executive decision-making</li>
+                <li>Designed fuel consumption analysis by equipment model to identify efficiency gaps</li>
+                <li>Established component lifecycle analysis to optimize parts ordering and reduce inventory costs</li>
+                <li>Built lean reporting systems comparing expenses with production output over time</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">IMPORT OPERATIONS | SUPPLY CHAIN MANAGEMENT DEPARTMENT</div>
+            <p><strong>Key Focus:</strong> International Trade, Tax Exemption, Customs Clearance, Document Management</p>
+            <ul class="achievement-list">
+                <li>Managed hundreds of import operations with Master List, SKBPPN & SKBPPH for complete tax exemption (VAT and Income Tax = "0")</li>
+                <li>Handled complete import documentation from China and other countries until customs release</li>
+                <li>Coordinated billion-dollar joint venture import operations with expatriate partners</li>
+                <li>Streamlined customs inspection processes and exemption procedures</li>
+                <li>Managed scrap documentation processes from shipper/China through to unloading and tax clearance</li>
+                <li>Established efficient communication protocols with international suppliers and customs authorities</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">EXPEDITION & PROCUREMENT | SUPPLY CHAIN MANAGEMENT DEPARTMENT</div>
+            <p><strong>Key Focus:</strong> Inter-island Logistics, Sebuku Island Operations, Vendor Management, KPI Development</p>
+            <ul class="achievement-list">
+                <li>Coordinated complex shipments to Sebuku Island from China, Jakarta, Surabaya, Banjarmasin using LCT and Barge Ships</li>
+                <li>Managed time-critical material deliveries with detailed sailing, unloading, and customs event planning</li>
+                <li>Designed and implemented KPI monitoring systems for buyer performance evaluation</li>
+                <li>Created outstanding order tracking systems for all departments' spare parts requirements</li>
+                <li>Optimized multi-modal transportation costs through strategic routing and vessel consolidation</li>
+                <li>Handled Mother Vessel operations from China with local distribution networks</li>
+                <li>Established efficient trucking and barge coordination for island-to-mainland logistics</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">RKAB (RENCANA KEGIATAN ANGGARAN & BELANJA) | MINING OPERATIONS</div>
+            <p><strong>Key Focus:</strong> Mining Budget Planning, ESDM Compliance, Quarterly & Annual Reporting, TKDN Management</p>
+            <ul class="achievement-list">
+                <li>Prepared comprehensive quarterly and annual RKAB reports for mining company operations</li>
+                <li>Managed Belanja Barang & Jasa (Goods & Services Expenditure) budgeting with TKDN compliance</li>
+                <li>Coordinated with ESDM (Ministry of Energy and Mineral Resources) for regulatory submissions</li>
+                <li>Enhanced budget accuracy through historical data analysis and trend forecasting</li>
+                <li>Streamlined RKAB reporting processes using automated data collection and analysis systems</li>
+                <li>Ensured full compliance with Indonesian mining regulations and local content requirements</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>CONTENT CREATION & KNOWLEDGE SHARING</h2>
+        <div class="highlight">
+            <h3>YouTube Channel: www.youtube.com/@dwihpjavas</h3>
+            <p><strong>3,200+ Subscribers | 1M+ Views</strong> | Educational content on Repair & Maintenance Management</p>
+            <ul class="achievement-list">
+                <li>Heavy Equipment Maintenance best practices and tutorials</li>
+                <li>Predictive Maintenance strategies and implementation</li>
+                <li>Repair & Maintenance Management for mining and industrial equipment</li>
+                <li>Building professional network through educational content during COVID-19 WFH period</li>
+                <li>Sharing real-world experience in maintenance management across multiple industries</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>CAREER OBJECTIVE</h2>
+        <p>At this stage of my career, I am enthusiastic about new challenges and seeking opportunities to step out of my comfort zone to bring more value and financial security for my family. With no complaints from my recent employers and a clean professional record, I am confident that I have much more to offer than the average professional in my field.</p>
+        
+        <p>I am seeking a challenging senior position where I can leverage my 25+ years of experience in repair & maintenance, supply chain management, and data analytics to drive cost efficiency and operational excellence. I believe in finding the right fit - putting the right puzzles in the right place and time, working as an integrated team that supports each other's growth.</p>
+        
+        <p><strong>I am ready for presentation opportunities to discuss in detail what I can bring to your organization.</strong> I enjoy sharing knowledge about maintenance, procurement, imports, and shipments with anyone, anytime, under good conditions. Together, we can build the perfect system by combining our strengths and expertise.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; color: #6b7280; font-size: 0.9em;">
+        <p><em>References available upon request</em></p>
+        <p>Jakarta, December 2023</p>
+        <p><strong>Sincerely yours,</strong></p>
+        <p><strong>Dwi Hery Purnomo – wa.me/+6281385639122</strong></p>
+    </div>
+</body>
+</html>
