@@ -29,10 +29,11 @@ const ContactSection = () => {
             <h3>Let's Discuss Your Data Analytics Needs</h3>
             <p>Ready to transform your data into actionable insights? I'm here to help you unlock the power of your data with advanced analytics solutions.</p>
             <div className="contact-details">
-              <p><i className="fas fa-envelope"></i> your.email@example.com</p>
-              <p><i className="fas fa-phone"></i> +62 xxx xxxx xxxx</p>
-              <p><i className="fas fa-map-marker-alt"></i> Indonesia</p>
+              <p><i className="fas fa-envelope"></i> dwihplanner@gmail.com</p>
+              <p><i className="fas fa-phone"></i> +6281385639122</p>
+              <p><i className="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
               <p><i className="fas fa-linkedin"></i> linkedin.com/in/dwi-hery-purnomo</p>
+              <p><i className="fab fa-youtube"></i> youtube.com/@dwihpjavas</p>
             </div>
             <div className="expertise-note">
               <h4>My Expertise Includes:</h4>

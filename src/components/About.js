@@ -8,10 +8,10 @@ export default function AboutSection() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              Welcome! I am Dwi Hery Purnomo MM, a dedicated professional with over 20+ years
+              Welcome! I am Dwi Hery Purnomo, Magister Management, a dedicated professional with over 20+ years
               of experience in Repair & Maintenance Management, Supply Chain Operations, and Import Handling.
-              With a Master of Management degree from Sekolah Tinggi Ilmu Ekonomi Harapan Bangsa,
-              I'm a father of 4 children with a passion for operational excellence.
+              Currently pursuing my Master's degree (M.M) with a background in Economics Management from Universitas Terbuka,
+              I'm a father of 4 children with a passion for operational excellence and data analytics.
             </p>
             {/* ...lanjutkan semua <p> lainnya... */}
             <div className="stats">

@@ -19,7 +19,11 @@ const AboutSection = () => {
             <div className="about-details">
               <div className="detail-item">
                 <span className="label">Name:</span>
-                <span className="value">Dwi Hery Purnomo</span>
+                <span className="value">Dwi Hery Purnomo, M.M</span>
+              </div>
+              <div className="detail-item">
+                <span className="label">Education:</span>
+                <span className="value">Magister Management (M.M)</span>
               </div>
               <div className="detail-item">
                 <span className="label">Specialization:</span>
@@ -27,11 +31,15 @@ const AboutSection = () => {
               </div>
               <div className="detail-item">
                 <span className="label">Location:</span>
-                <span className="value">Indonesia</span>
+                <span className="value">Jakarta, Indonesia</span>
               </div>
               <div className="detail-item">
                 <span className="label">Email:</span>
-                <span className="value">your.email@example.com</span>
+                <span className="value">dwihplanner@gmail.com</span>
+              </div>
+              <div className="detail-item">
+                <span className="label">Phone:</span>
+                <span className="value">+6281385639122</span>
               </div>
             </div>
           </div>
