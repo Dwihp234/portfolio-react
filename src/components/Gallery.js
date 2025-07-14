@@ -131,30 +131,30 @@ const Gallery = () => {
         "Import Documentation",
         "RKAB Budgeting & Reporting"
       ]
-    },
-    {
-      id: 3,
-      title: "YouTube Channel @dwihpjavas",
-      description: "Educational content creation sharing 25+ years of Repair & Maintenance expertise with 3,200+ subscribers worldwide.",
-      category: "content",
-      folder: "YouTube",
-      images: [
-        "/gallery/YouTube/channel-overview.jpg",
-        "/gallery/YouTube/maintenance-tutorials.jpg",
-        "/gallery/YouTube/heavy-equipment.jpg",
-        "/gallery/YouTube/predictive-maintenance.jpg"
-      ],
-      technologies: ["Video Production", "Educational Content", "YouTube Analytics"],
-      type: "Knowledge Sharing",
-      highlights: [
-        "3,200+ Subscribers",
-        "1M+ Views",
-        "Heavy Equipment Tutorials",
-        "Maintenance Best Practices",
-        "Industry Knowledge Sharing",
-        "COVID-19 WFH Content Creation"
-      ]
     }
+    // {
+    //   id: 3,
+    //   title: "YouTube Channel @dwihpjavas",
+    //   description: "Educational content creation sharing 25+ years of Repair & Maintenance expertise with 3,200+ subscribers worldwide.",
+    //   category: "content",
+    //   folder: "YouTube",
+    //   images: [
+    //     "/gallery/YouTube/channel-overview.jpg",
+    //     "/gallery/YouTube/maintenance-tutorials.jpg",
+    //     "/gallery/YouTube/heavy-equipment.jpg",
+    //     "/gallery/YouTube/predictive-maintenance.jpg"
+    //   ],
+    //   technologies: ["Video Production", "Educational Content", "YouTube Analytics"],
+    //   type: "Knowledge Sharing",
+    //   highlights: [
+    //     "3,200+ Subscribers",
+    //     "1M+ Views",
+    //     "Heavy Equipment Tutorials",
+    //     "Maintenance Best Practices",
+    //     "Industry Knowledge Sharing",
+    //     "COVID-19 WFH Content Creation"
+    //   ]
+    // }
   ];
 
   return (
@@ -301,78 +301,6 @@ const Gallery = () => {
                 <div className="image-overlay scm-overlay">
                   <h4>{getImageTitle(image)}</h4>
                   <span className="analytics-type">SCM Operations</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* YouTube Channel Section */}
-        <div className="department-section youtube-section">
-          <div className="department-header">
-            <div className="department-icon youtube-icon">
-              <i className="fab fa-youtube"></i>
-            </div>
-            <div className="department-info">
-              <h3>YouTube Channel @dwihpjavas</h3>
-              <p>Educational content creation sharing 25+ years of Repair & Maintenance expertise with 3,200+ subscribers worldwide.</p>
-              <div className="tech-tags">
-                {["Video Production", "Educational Content", "YouTube Analytics"].map((tech, index) => (
-                  <span key={index} className="tech-tag youtube-tag">{tech}</span>
-                ))}
-              </div>
-              <a href="https://www.youtube.com/@dwihpjavas" className="youtube-link" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-youtube"></i>
-                Visit Channel
-              </a>
-            </div>
-          </div>
-
-          <div className="department-highlights">
-            <h4>Channel Achievements:</h4>
-            <div className="highlights-grid">
-              {[
-                "3,200+ Subscribers",
-                "1M+ Views",
-                "Heavy Equipment Tutorials",
-                "Maintenance Best Practices",
-                "Industry Knowledge Sharing",
-                "COVID-19 WFH Content Creation"
-              ].map((highlight, index) => (
-                <div key={index} className="highlight-item youtube-highlight">
-                  <i className="fas fa-play-circle"></i>
-                  <span>{highlight}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="images-grid youtube-gallery">
-            {galleryData[2].images.map((image, index) => (
-              <div key={index} className="image-item youtube-item">
-                <div className="youtube-image-container" onClick={() => openImageModal(`/gallery${image}`, getImageTitle(image))}>
-                  <img 
-                    src={`/gallery${image}`} 
-                    alt={getImageTitle(image)}
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
-                    }}
-                    style={{width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer'}}
-                  />
-                  <div className="youtube-placeholder" style={{display: 'flex'}}>
-                    <i className="fab fa-youtube"></i>
-                    <h4>{getImageTitle(image)}</h4>
-                    <p>YouTube content screenshots</p>
-                    <span className="file-path">YouTube/{image.split('/').pop()}</span>
-                  </div>
-                  <div className="zoom-indicator">
-                    <i className="fas fa-search-plus"></i>
-                  </div>
-                </div>
-                <div className="image-overlay youtube-overlay">
-                  <h4>{getImageTitle(image)}</h4>
-                  <span className="analytics-type">Video Content</span>
                 </div>
               </div>
             ))}

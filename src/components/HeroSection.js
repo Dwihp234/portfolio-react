@@ -38,34 +38,35 @@ const HeroSection = () => {
           </h1>
           
           <h2 className="hero-subtitle">
-            M.M - Magister Manajemen | Repair & Maintenance Expert | Supply Chain Management Expert
+            Master of Management (S2) | Procurement & Outbound Logistics Superintendent | Mining Industry Expert
           </h2>
           
           <p className="hero-description">
-            Outbound Expeditors Inter Island and Country | Inventory & Purchased Cost Control | 
-            Data Advanced Integrated Reporting & Sr.Analyst | Import Handling | RKAB ESDM Annual 
-            Budgeting & Quarterly Reporting (Belanja Barang & Jasa - TKDN) | YouTube Content Creator 
-            with 3,200+ subscribers sharing maintenance management expertise.
+            Master of Management graduate with 25+ years of mining industry experience from Port Operations to 
+            Procurement & Outbound Logistics. Currently serving as Procurement & Outbound Logistics Superintendent 
+            at PT. Sebuku Iron Lateritic Ores. Expert in Heavy Equipment maintenance, Supply Chain Management, and 
+            transforming raw data into management insights using Microsoft Power Query and R Programming.
           </p>
           
           <div className="hero-stats">
             <div className="stat-item">
               <span className="stat-number">25+</span>
-              <span className="stat-label">Years Experience</span>
+              <span className="stat-label">Years Mining Industry</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">3,200+</span>
+              <span className="stat-number">4,500+</span>
               <span className="stat-label">YouTube Subscribers</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">100+</span>
-              <span className="stat-label">Import Operations</span>
+              <span className="stat-number">12</span>
+              <span className="stat-label">Companies Worked</span>
             </div>
           </div>
           
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => {
-              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+              const contact = document.getElementById('contact');
+              contact.scrollIntoView({ behavior: 'smooth' });
             }}>
               <i className="fas fa-envelope"></i>
               Get In Touch
@@ -77,7 +78,8 @@ const HeroSection = () => {
               Download CV
             </button>
             <button className="btn-secondary" onClick={() => {
-              document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+              const about = document.getElementById('about');
+              about.scrollIntoView({ behavior: 'smooth' });
             }}>
               <i className="fas fa-user"></i>
               Learn More
@@ -87,7 +89,7 @@ const HeroSection = () => {
         
         <div className="hero-image">
           <div className="profile-card">
-            {/* Rotating Tech Icons Around Photo */}
+            {/* Rotating Tech Orbit */}
             <div className="rotating-tech-orbit">
               <div className="orbit-item orbit-1" title="R Programming">
                 <i className="fab fa-r-project"></i>
@@ -115,7 +117,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Animated Graphics Background */}
+            {/* Animated Graphics */}
             <div className="graphics-animation">
               <div className="rotating-chart chart-1">
                 <svg viewBox="0 0 100 100" width="60" height="60">
@@ -139,10 +141,10 @@ const HeroSection = () => {
             </div>
 
             <div className="profile-image">
-              <img src="pictures/profile-photo.jpg" alt="Dwi Hery Purnomo" />
+              <img src="pictures/profile-photo.jpg" alt="Dwi Hery Purnomo - Master of Management" />
             </div>
             <div className="profile-badge">
-              <i className="fas fa-award"></i>
+              <i className="fas fa-graduation-cap"></i>
               <span>M.M</span>
             </div>
           </div>

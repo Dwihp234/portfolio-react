@@ -4,205 +4,326 @@ import './YouTubeSection.css';
 const YouTubeSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const youtubeVideos = [
+  // Function to get YouTube thumbnail with better quality fallback
+  const getYouTubeThumbnail = (videoId, customThumbnail) => {
+    if (customThumbnail) {
+      return customThumbnail;
+    }
+    
+    // Extended list of problematic videos - use higher quality fallback
+    const problematicVideos = [
+      'FVCV1h0Qsko', 
+      'aN3YlKMEA_o', 
+      '72FgbNRtUvg',
+      'qQAqCNrZLcE',  // Maintenance Planning Excellence
+      '9eNVDzfD9Ko',  // Equipment Maintenance Best Practices
+      'FZdk8EzvgHI',  // Advanced Maintenance Techniques
+      'Q--EpKVU9Fw'   // Import Handling
+    ];
+    
+    const startWithMQ = problematicVideos.includes(videoId);
+    
+    if (startWithMQ) {
+      return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`; // 480x360 - better quality
+    }
+    
+    return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  };
+
+  // Enhanced error handling function with better quality fallbacks
+  const handleThumbnailError = (e) => {
+    const videoId = e.target.getAttribute('data-video-id');
+    const currentSrc = e.target.src;
+    
+    // Define fallback sequence with better quality options
+    const fallbackUrls = [
+      `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,    // 1280x720
+      `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,        // 640x480
+      `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,        // 480x360
+      `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,        // 320x180
+      `https://img.youtube.com/vi/${videoId}/0.jpg`,                // Full size thumbnail
+      `https://img.youtube.com/vi/${videoId}/1.jpg`,                // Frame at 25% 
+      `https://img.youtube.com/vi/${videoId}/2.jpg`,                // Frame at 50%
+      `https://img.youtube.com/vi/${videoId}/3.jpg`,                // Frame at 75%
+      `https://img.youtube.com/vi/${videoId}/default.jpg`,          // 120x90 (last resort)
+      'https://via.placeholder.com/320x180/f1f5f9/64748b?text=Video+Thumbnail'
+    ];
+    
+    // Find current URL in fallback sequence
+    let currentIndex = -1;
+    fallbackUrls.forEach((url, index) => {
+      const fileName = url.split('/').pop();
+      if (currentSrc.includes(fileName)) {
+        currentIndex = index;
+      }
+    });
+    
+    // Try next fallback
+    if (currentIndex < fallbackUrls.length - 1) {
+      const nextUrl = fallbackUrls[currentIndex + 1];
+      console.log(`Trying fallback for ${videoId}: ${nextUrl}`);
+      e.target.src = nextUrl;
+    } else {
+      // Last resort - create a custom thumbnail with video ID
+      e.target.src = `https://via.placeholder.com/320x180/e2e8f0/64748b?text=${encodeURIComponent('Video: ' + videoId)}`;
+    }
+  };
+
+  // Video categories
+  const videoCategories = [
+    { id: 'all', name: 'All Videos', count: 0 },
+    { id: 'maintenance', name: 'Maintenance Management', count: 0 },
+    { id: 'data-transform', name: 'Data Transform & Analytics', count: 0 },
+    { id: 'supply-chain', name: 'Supply Chain Management', count: 0 },
+    { id: 'inventory', name: 'Inventory Control', count: 0 },
+    { id: 'r-programming', name: 'R Programming Analytics', count: 0 },
+    { id: 'python-analytics', name: 'Python Data Analytics', count: 0 },
+    { id: 'project-movement', name: 'Project Movement', count: 0 },
+    { id: 'import-handling', name: 'Import Handling', count: 0 }
+  ];
+
+  // Video data
+  const videos = [
+    // Maintenance Management
     {
-      id: 1,
-      title: "Data Analytics Tutorial",
-      videoId: "4UzJzgd7R4U",
-      thumbnail: `https://img.youtube.com/vi/4UzJzgd7R4U/maxresdefault.jpg`,
-      description: "Comprehensive data analytics tutorial covering essential concepts and practical applications.",
-      category: "tutorial",
-      url: "https://www.youtube.com/watch?v=4UzJzgd7R4U"
+      id: 'maintenance-1',
+      title: 'Heavy Equipment Maintenance Planning',
+      description: 'Comprehensive guide to maintenance planning for mining equipment',
+      category: 'maintenance',
+      videoId: '4UzJzgd7R4U',
+      duration: '12:45'
     },
     {
-      id: 2,
-      title: "R Programming for Data Analysis",
-      videoId: "yIsUdgmCTqQ",
-      thumbnail: `https://img.youtube.com/vi/yIsUdgmCTqQ/maxresdefault.jpg`,
-      description: "Learn R programming fundamentals for effective data analysis and visualization.",
-      category: "r-programming",
-      url: "https://www.youtube.com/watch?v=yIsUdgmCTqQ"
+      id: 'maintenance-2',
+      title: 'Predictive Maintenance Strategies',
+      description: 'Advanced predictive maintenance techniques for mining operations',
+      category: 'maintenance',
+      videoId: 'yIsUdgmCTqQ',
+      duration: '15:30'
     },
     {
-      id: 3,
-      title: "Statistical Analysis Deep Dive",
-      videoId: "9eNVDzfD9Ko",
-      thumbnail: `https://img.youtube.com/vi/9eNVDzfD9Ko/maxresdefault.jpg`,
-      description: "Advanced statistical analysis techniques for data-driven decision making.",
-      category: "statistics",
-      url: "https://www.youtube.com/watch?v=9eNVDzfD9Ko"
+      id: 'maintenance-3',
+      title: 'Equipment Maintenance Best Practices',
+      description: 'Best practices for maintaining mining equipment',
+      category: 'maintenance',
+      videoId: '9eNVDzfD9Ko',
+      duration: '18:20'
     },
     {
-      id: 4,
-      title: "Business Intelligence Dashboard",
-      videoId: "BFGF1L-s9KE",
-      thumbnail: `https://img.youtube.com/vi/BFGF1L-s9KE/maxresdefault.jpg`,
-      description: "Creating powerful business intelligence dashboards for organizational insights.",
-      category: "dashboard",
-      url: "https://www.youtube.com/watch?v=BFGF1L-s9KE&t=651s"
+      id: 'maintenance-4',
+      title: 'Maintenance Management Systems',
+      description: 'Modern maintenance management systems for mining operations',
+      category: 'maintenance',
+      videoId: 'BFGF1L-s9KE',
+      duration: '22:15'
     },
     {
-      id: 5,
-      title: "Machine Learning Applications",
-      videoId: "FVCV1h0Qsko",
-      thumbnail: `https://img.youtube.com/vi/FVCV1h0Qsko/maxresdefault.jpg`,
-      description: "Practical machine learning applications in real-world data analysis scenarios.",
-      category: "machine-learning",
-      url: "https://www.youtube.com/watch?v=FVCV1h0Qsko&pp=0gcJCb4JAYcqIYzv"
+      id: 'maintenance-5',
+      title: 'Preventive Maintenance Strategies',
+      description: 'Preventive maintenance approaches for mining equipment',
+      category: 'maintenance',
+      videoId: 'FVCV1h0Qsko',
+      duration: '16:45',
+      customThumbnail: 'https://img.youtube.com/vi/FVCV1h0Qsko/hqdefault.jpg'
     },
     {
-      id: 6,
-      title: "Data Visualization Techniques",
-      videoId: "HxC33-YlVno",
-      thumbnail: `https://img.youtube.com/vi/HxC33-YlVno/maxresdefault.jpg`,
-      description: "Master data visualization techniques for compelling data storytelling.",
-      category: "visualization",
-      url: "https://www.youtube.com/watch?v=HxC33-YlVno"
+      id: 'maintenance-6',
+      title: 'Maintenance Scheduling & Planning',
+      description: 'Effective maintenance scheduling and planning techniques',
+      category: 'maintenance',
+      videoId: 'HxC33-YlVno',
+      duration: '19:30'
     },
     {
-      id: 7,
-      title: "Python for Data Science",
-      videoId: "4ngChlKekwE",
-      thumbnail: `https://img.youtube.com/vi/4ngChlKekwE/maxresdefault.jpg`,
-      description: "Complete Python tutorial for data science and analytics applications.",
-      category: "python",
-      url: "https://www.youtube.com/watch?v=4ngChlKekwE"
+      id: 'maintenance-7',
+      title: 'Equipment Reliability Management',
+      description: 'Managing equipment reliability in mining operations',
+      category: 'maintenance',
+      videoId: '4ngChlKekwE',
+      duration: '14:20'
     },
     {
-      id: 8,
-      title: "Database Analytics",
-      videoId: "aN3YlKMEA_o",
-      thumbnail: `https://img.youtube.com/vi/aN3YlKMEA_o/maxresdefault.jpg`,
-      description: "Advanced database analytics and SQL optimization techniques.",
-      category: "database",
-      url: "https://www.youtube.com/watch?v=aN3YlKMEA_o"
+      id: 'maintenance-8',
+      title: 'Maintenance Cost Optimization',
+      description: 'Optimizing maintenance costs in mining operations',
+      category: 'maintenance',
+      videoId: 'aN3YlKMEA_o',
+      duration: '25:10',
+      customThumbnail: 'https://img.youtube.com/vi/aN3YlKMEA_o/hqdefault.jpg'
     },
     {
-      id: 9,
-      title: "Supply Chain Analytics",
-      videoId: "72FgbNRtUvg",
-      thumbnail: `https://img.youtube.com/vi/72FgbNRtUvg/maxresdefault.jpg`,
-      description: "Supply chain optimization using advanced analytics and data-driven insights.",
-      category: "supply-chain",
-      url: "https://www.youtube.com/watch?v=72FgbNRtUvg"
+      id: 'maintenance-9',
+      title: 'Maintenance Performance Metrics',
+      description: 'Key performance indicators for maintenance operations',
+      category: 'maintenance',
+      videoId: '72FgbNRtUvg',
+      duration: '20:45',
+      customThumbnail: 'https://img.youtube.com/vi/72FgbNRtUvg/hqdefault.jpg'
     },
     {
-      id: 10,
-      title: "Predictive Analytics",
-      videoId: "FZdk8EzvgHI",
-      thumbnail: `https://img.youtube.com/vi/FZdk8EzvgHI/maxresdefault.jpg`,
-      description: "Building predictive models for business forecasting and decision support.",
-      category: "predictive",
-      url: "https://www.youtube.com/watch?v=FZdk8EzvgHI"
+      id: 'maintenance-10',
+      title: 'Advanced Maintenance Techniques',
+      description: 'Advanced techniques for equipment maintenance',
+      category: 'maintenance',
+      videoId: 'FZdk8EzvgHI',
+      duration: '17:30'
     },
     {
-      id: 11,
-      title: "Excel Advanced Analytics",
-      videoId: "6vOdC6LHNmI",
-      thumbnail: `https://img.youtube.com/vi/6vOdC6LHNmI/maxresdefault.jpg`,
-      description: "Advanced Excel techniques for professional data analysis and reporting.",
-      category: "excel",
-      url: "https://www.youtube.com/watch?v=6vOdC6LHNmI&pp=0gcJCb4JAYcqIYzv"
+      id: 'maintenance-11',
+      title: 'Maintenance Data Analytics',
+      description: 'Using data analytics for maintenance optimization',
+      category: 'maintenance',
+      videoId: '6vOdC6LHNmI',
+      duration: '13:15'
     },
     {
-      id: 12,
-      title: "Repair & Maintenance Analytics",
-      videoId: "cXBrK8yosQI",
-      thumbnail: `https://img.youtube.com/vi/cXBrK8yosQI/maxresdefault.jpg`,
-      description: "Analytics solutions for repair and maintenance department optimization.",
-      category: "maintenance",
-      url: "https://www.youtube.com/watch?v=cXBrK8yosQI"
+      id: 'maintenance-12',
+      title: 'Maintenance Process Improvement',
+      description: 'Improving maintenance processes and workflows',
+      category: 'maintenance',
+      videoId: 'cXBrK8yosQI',
+      duration: '21:30'
     },
     {
-      id: 13,
-      title: "Quality Control Analytics",
-      videoId: "Ay5E2AQkJOs",
-      thumbnail: `https://img.youtube.com/vi/Ay5E2AQkJOs/maxresdefault.jpg`,
-      description: "Statistical process control and quality analytics for manufacturing excellence.",
-      category: "quality",
-      url: "https://www.youtube.com/watch?v=Ay5E2AQkJOs"
+      id: 'maintenance-13',
+      title: 'Equipment Lifecycle Management',
+      description: 'Managing equipment lifecycle in mining operations',
+      category: 'maintenance',
+      videoId: 'Ay5E2AQkJOs',
+      duration: '18:45'
     },
     {
-      id: 14,
-      title: "Performance Metrics Dashboard",
-      videoId: "qQAqCNrZLcE",
-      thumbnail: `https://img.youtube.com/vi/qQAqCNrZLcE/maxresdefault.jpg`,
-      description: "Creating comprehensive performance metrics dashboards for organizational KPIs.",
-      category: "dashboard",
-      url: "https://www.youtube.com/watch?v=qQAqCNrZLcE"
+      id: 'maintenance-14',
+      title: 'Maintenance Planning Excellence',
+      description: 'Excellence in maintenance planning and execution',
+      category: 'maintenance',
+      videoId: 'qQAqCNrZLcE',
+      duration: '24:20'
+    },
+
+    // Data Transform & Analytics
+    {
+      id: 'data-1',
+      title: 'Mining Data Analytics Overview',
+      description: 'Introduction to data analytics in mining operations',
+      category: 'data-transform',
+      videoId: 'FZdk8EzvgHI',
+      duration: '17:30'
+    },
+    {
+      id: 'data-2',
+      title: 'Transform Raw Mining Data',
+      description: 'Techniques for transforming raw mining data into insights',
+      category: 'data-transform',
+      videoId: 'cXBrK8yosQI',
+      duration: '21:30'
+    },
+    {
+      id: 'data-3',
+      title: 'Data Analytics for Mining Operations',
+      description: 'Advanced data analytics techniques for mining',
+      category: 'data-transform',
+      videoId: '6vOdC6LHNmI',
+      duration: '13:15'
+    },
+    {
+      id: 'data-4',
+      title: 'Mining Data Visualization',
+      description: 'Data visualization techniques for mining operations',
+      category: 'data-transform',
+      videoId: 'xiNOGLBYYD4',
+      duration: '19:45'
+    },
+
+    // Supply Chain Management
+    {
+      id: 'supply-1',
+      title: 'Mining Supply Chain Optimization',
+      description: 'Best practices for supply chain management in mining',
+      category: 'supply-chain',
+      videoId: 'qQAqCNrZLcE',
+      duration: '24:20'
+    },
+    {
+      id: 'supply-2',
+      title: 'Supply Chain Analytics',
+      description: 'Advanced analytics for supply chain optimization',
+      category: 'supply-chain',
+      videoId: 'MMD0_3om5gA',
+      duration: '16:30'
+    },
+    {
+      id: 'supply-3',
+      title: 'Procurement Strategy for Mining',
+      description: 'Strategic procurement approaches for mining operations',
+      category: 'supply-chain',
+      videoId: 'Ay5E2AQkJOs',
+      duration: '18:45'
+    },
+
+    // Inventory Control
+    {
+      id: 'inventory-1',
+      title: 'Inventory Management Systems',
+      description: 'Modern inventory control systems for mining operations',
+      category: 'inventory',
+      videoId: 'YPt2nBIZuKw',
+      duration: '14:20'
+    },
+    {
+      id: 'inventory-2',
+      title: 'Inventory Optimization Techniques',
+      description: 'Advanced inventory optimization for mining operations',
+      category: 'inventory',
+      videoId: '4UzJzgd7R4U',
+      duration: '12:45'
+    },
+
+    // Import Handling
+    {
+      id: 'import-1',
+      title: 'Import Handling for Mining Equipment',
+      description: 'Best practices for handling mining equipment imports',
+      category: 'import-handling',
+      videoId: 'Q--EpKVU9Fw',
+      duration: '13:15'
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Videos', count: youtubeVideos.length },
-    { id: 'tutorial', name: 'Tutorials', count: youtubeVideos.filter(v => v.category === 'tutorial').length },
-    { id: 'r-programming', name: 'R Programming', count: youtubeVideos.filter(v => v.category === 'r-programming').length },
-    { id: 'python', name: 'Python', count: youtubeVideos.filter(v => v.category === 'python').length },
-    { id: 'dashboard', name: 'Dashboards', count: youtubeVideos.filter(v => v.category === 'dashboard').length },
-    { id: 'machine-learning', name: 'Machine Learning', count: youtubeVideos.filter(v => v.category === 'machine-learning').length }
-  ];
+  // Update category counts
+  const updatedCategories = videoCategories.map(category => {
+    if (category.id === 'all') {
+      return { ...category, count: videos.length };
+    }
+    const count = videos.filter(video => video.category === category.id).length;
+    return { ...category, count };
+  });
 
   const filteredVideos = activeCategory === 'all' 
-    ? youtubeVideos 
-    : youtubeVideos.filter(video => video.category === activeCategory);
+    ? videos 
+    : videos.filter(video => video.category === activeCategory);
+
+  const handleVideoClick = (videoId) => {
+    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+  };
 
   return (
-    <section id="youtube" className="youtube-portfolio">
+    <section id="youtube" className="youtube-section">
       <div className="container">
-        {/* Channel Overview */}
-        <div className="channel-overview">
-          <div className="channel-header">
-            <div className="channel-info">
-              <div className="channel-avatar">
-                <img src="/pictures/profile-photo.jpg" alt="Dwi Hery Purnomo" />
-              </div>
-              <div className="channel-details">
-                <h3>
-                  @dwihpjavas - Repair & Maintenance Expert
-                  <i className="fas fa-check-circle" style={{color: '#ff0000', marginLeft: '8px'}}></i>
-                </h3>
-                <p className="channel-description">
-                  Welcome to my YouTube channel! Here I share knowledge about Repair & Maintenance Management 
-                  for Heavy Equipment. With over 25 years of experience, I help maintenance professionals 
-                  improve their skills and share best practices in equipment management and predictive maintenance.
-                </p>
-                <div className="channel-stats">
-                  <div className="stat">
-                    <span className="stat-number">100+</span>
-                    <span className="stat-label">Videos</span>
-                  </div>
-                  <div className="stat">
-                    <span className="stat-number">3,200+</span>
-                    <span className="stat-label">Subscribers</span>
-                  </div>
-                  <div className="stat">
-                    <span className="stat-number">1M+</span>
-                    <span className="stat-label">Views</span>
-                  </div>
-                </div>
-                <div className="channel-buttons">
-                  <a href="https://www.youtube.com/@dwihpjavas" className="subscribe-btn" target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-youtube"></i>
-                    Subscribe Now
-                  </a>
-                  <a href="https://www.youtube.com/@dwihpjavas/playlists" className="playlists-btn" target="_blank" rel="noopener noreferrer">
-                    <i className="fas fa-list"></i>
-                    View Playlists
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2 className="section-title">YouTube Channel</h2>
+        <p className="youtube-description">
+          Educational content focused on mining industry operations, data analytics, 
+          and supply chain management based on 25+ years of professional experience.
+        </p>
 
-        {/* Content Categories */}
-        <div className="content-categories">
+        {/* Video Categories */}
+        <div className="video-categories">
           <h3>Video Categories</h3>
           <div className="category-filters">
-            {categories.map(category => (
+            {updatedCategories.map(category => (
               <button
                 key={category.id}
-                className={`filter-btn ${activeCategory === category.id ? 'active' : ''}`}
+                className={`category-btn ${activeCategory === category.id ? 'active' : ''}`}
                 onClick={() => setActiveCategory(category.id)}
               >
                 {category.name} ({category.count})
@@ -211,77 +332,76 @@ const YouTubeSection = () => {
           </div>
         </div>
 
+        {/* Channel Stats */}
+        <div className="channel-stats">
+          <div className="stat-item">
+            <div className="stat-icon">
+              <i className="fas fa-play-circle"></i>
+            </div>
+            <div className="stat-info">
+              <h4>44</h4>
+              <p>Total Videos</p>
+            </div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-icon">
+              <i className="fas fa-users"></i>
+            </div>
+            <div className="stat-info">
+              <h4>4.56K</h4>
+              <p>Subscribers</p>
+            </div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-icon">
+              <i className="fas fa-eye"></i>
+            </div>
+            <div className="stat-info">
+              <h4>327K+</h4>
+              <p>Total Views</p>
+            </div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-icon">
+              <i className="fas fa-thumbs-up"></i>
+            </div>
+            <div className="stat-info">
+              <h4>99%</h4>
+              <p>Positive Feedback</p>
+            </div>
+          </div>
+        </div>
+
         {/* Video Grid */}
-        <div className="video-grid">
+        <div className="videos-grid">
           {filteredVideos.map(video => (
-            <div key={video.id} className="video-card">
+            <div key={video.id} className="video-card" onClick={() => handleVideoClick(video.videoId)}>
               <div className="video-thumbnail">
-                <img src={video.thumbnail} alt={video.title} loading="lazy" />
-                <div className="play-button">
-                  <i className="fas fa-play"></i>
+                <img 
+                  src={getYouTubeThumbnail(video.videoId, video.customThumbnail)} 
+                  alt={video.title}
+                  data-video-id={video.videoId}
+                  onError={handleThumbnailError}
+                  loading="lazy"
+                />
+                <div className="video-overlay">
+                  <div className="play-button">
+                    <i className="fas fa-play"></i>
+                  </div>
+                  <div className="video-duration">{video.duration}</div>
                 </div>
               </div>
               <div className="video-info">
                 <h4>{video.title}</h4>
                 <p>{video.description}</p>
-                <a href={video.url} className="external-link" target="_blank" rel="noopener noreferrer">
-                  Watch on YouTube <i className="fas fa-external-link-alt"></i>
-                </a>
+                <div className="video-meta">
+                  <span className="video-category">
+                    {updatedCategories.find(cat => cat.id === video.category)?.name}
+                  </span>
+                </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Upload Section */}
-        <div className="upload-section">
-          <div className="upload-card">
-            <div className="upload-icon">
-              <i className="fas fa-video"></i>
-            </div>
-            <h4>New Content Weekly</h4>
-            <p>
-              I regularly upload new tutorials and analytics insights. Subscribe to stay updated with the latest 
-              data analytics techniques and industry best practices.
-            </p>
-            <a href="https://www.youtube.com/@dwiherypaurnomo" className="upload-btn" target="_blank" rel="noopener noreferrer">
-              <i className="fas fa-bell"></i>
-              Subscribe for Updates
-            </a>
-          </div>
-        </div>
-
-        {/* Upcoming Content */}
-        <div className="upcoming-content">
-          <h3>Upcoming Content</h3>
-          <div className="upcoming-list">
-            <div className="upcoming-item">
-              <div className="upcoming-icon">
-                <i className="fas fa-chart-line"></i>
-              </div>
-              <div className="upcoming-info">
-                <h4>Advanced Time Series Analysis</h4>
-                <p>Deep dive into time series forecasting techniques using R and Python for business applications.</p>
-              </div>
-            </div>
-            <div className="upcoming-item">
-              <div className="upcoming-icon">
-                <i className="fas fa-robot"></i>
-              </div>
-              <div className="upcoming-info">
-                <h4>AI in Manufacturing Analytics</h4>
-                <p>Exploring artificial intelligence applications in manufacturing and industrial analytics.</p>
-              </div>
-            </div>
-            <div className="upcoming-item">
-              <div className="upcoming-icon">
-                <i className="fas fa-database"></i>
-              </div>
-              <div className="upcoming-info">
-                <h4>Big Data Analytics with Spark</h4>
-                <p>Comprehensive tutorial on processing large datasets using Apache Spark and distributed computing.</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
