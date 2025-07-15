@@ -831,3 +831,15 @@
     padding: 0.2rem 0.5rem;
   }
 }
+
+/* Tambahan untuk icon yang mengapung */
+.floating-icons .icon-wrapper i {
+  font-size: 2.5rem;        /* Perbesar icon */
+  color: rgba(201, 189, 189, 0.25); /* Lebih terang, bisa diganti sesuai tema */
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+  transition: color 0.3s;
+}
+
+.floating-icons .icon-wrapper {
+  opacity: 0.7;             /* Tambah opacity */
+}
