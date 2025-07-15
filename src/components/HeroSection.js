@@ -20,6 +20,17 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Quote repositioned */}
+      <div className="hero-quote">
+        <div className="quote-container">
+          <i className="fas fa-quote-left quote-icon"></i>
+          <p className="quote-text">
+            "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
+          </p>
+          <cite className="quote-author">— John Naisbitt</cite>
+        </div>
+      </div>
+
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
@@ -37,18 +48,18 @@ const HeroSection = () => {
             with 3,200+ subscribers sharing maintenance management expertise.
           </p>
           
-          <div className="hero-stats clean-stats">
-            <div className="stat-item clean-card">
+          <div className="hero-stats">
+            <div className="stat-item">
               <span className="stat-number">25+</span>
-              <span className="stat-label">Years<br />Mining Industry</span>
+              <span className="stat-label">Years Experience</span>
             </div>
-            <div className="stat-item clean-card">
-              <span className="stat-number">4,500+</span>
-              <span className="stat-label">YouTube<br />Subscribers</span>
+            <div className="stat-item">
+              <span className="stat-number">3,200+</span>
+              <span className="stat-label">YouTube Subscribers</span>
             </div>
-            <div className="stat-item clean-card">
-              <span className="stat-number">10+</span>
-              <span className="stat-label">Different Companies<br />has Worked</span>
+            <div className="stat-item">
+              <span className="stat-number">100+</span>
+              <span className="stat-label">Import Operations</span>
             </div>
           </div>
           
@@ -59,21 +70,9 @@ const HeroSection = () => {
               <i className="fas fa-envelope"></i>
               Get In Touch
             </button>
-            <button
-              className="btn-secondary"
-              onClick={() => {
-                const allowedEmails = [
-                  "dwihplanner@gmail.com",
-                  "emailanda2@example.com"
-                ];
-                const userEmail = prompt("Masukkan email Anda untuk mengunduh CV:");
-                if (allowedEmails.includes(userEmail?.trim().toLowerCase())) {
-                  window.open('/CV_Dwi_Hery_Purnomo.html', '_blank');
-                } else {
-                  alert("Email belum terdaftar atau belum disetujui.");
-                }
-              }}
-            >
+            <button className="btn-secondary" onClick={() => {
+              window.open('/CV_Dwi_Hery_Purnomo.html', '_blank');
+            }}>
               <i className="fas fa-download"></i>
               Download CV
             </button>
@@ -145,16 +144,6 @@ const HeroSection = () => {
             <div className="profile-badge">
               <i className="fas fa-award"></i>
               <span>M.M</span>
-            </div>
-          </div>
-
-          <div className="hero-quote">
-            <div className="quote-container">
-              <i className="fas fa-quote-left quote-icon"></i>
-              <p className="quote-text">
-                "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
-              </p>
-              <cite className="quote-author">— John Naisbitt</cite>
             </div>
           </div>
         </div>
