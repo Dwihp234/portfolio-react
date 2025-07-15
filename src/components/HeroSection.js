@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text">Dwi smanagat Hery Purnomo</span>
+            Hi, I'm <span className="gradient-text">Dwi smanagat karya Hery Purnomo</span>
           </h1>
           
           <h2 className="hero-subtitle">
