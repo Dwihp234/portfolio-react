@@ -3,7 +3,7 @@ name: Deploy to Hostinger via SFTP
 on:
   push:
     branches:
-      - main  # Ganti jika branch utama kamu 'main'
+      - master  # Ganti jika branch utama kamu 'main'
 
 jobs:
   deploy:
