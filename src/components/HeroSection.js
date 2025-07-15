@@ -20,17 +20,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Quote repositioned */}
-      <div className="hero-quote">
-        <div className="quote-container">
-          <i className="fas fa-quote-left quote-icon"></i>
-          <p className="quote-text">
-            "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
-          </p>
-          <cite className="quote-author">— John Naisbitt</cite>
-        </div>
-      </div>
-
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
@@ -38,48 +27,58 @@ const HeroSection = () => {
           </h1>
           
           <h2 className="hero-subtitle">
-            Master of Management (S2) | Procurement & Outbound Logistics Superintendent | Mining Industry Expert
+            M.M - Magister Manajemen | Repair & Maintenance Expert | Supply Chain Management Expert
           </h2>
           
           <p className="hero-description">
-            Master of Management graduate with 25+ years of mining industry experience from Port Operations to 
-            Procurement & Outbound Logistics. Currently serving as Procurement & Outbound Logistics Superintendent 
-            at PT. Sebuku Iron Lateritic Ores. Expert in Heavy Equipment maintenance, Supply Chain Management, and 
-            transforming raw data into management insights using Microsoft Power Query and R Programming.
+            Outbound Expeditors Inter Island and Country | Inventory & Purchased Cost Control | 
+            Data Advanced Integrated Reporting & Sr.Analyst | Import Handling | RKAB ESDM Annual 
+            Budgeting & Quarterly Reporting (Belanja Barang & Jasa - TKDN) | YouTube Content Creator 
+            with 3,200+ subscribers sharing maintenance management expertise.
           </p>
           
-          <div className="hero-stats">
-            <div className="stat-item">
+          <div className="hero-stats clean-stats">
+            <div className="stat-item clean-card">
               <span className="stat-number">25+</span>
-              <span className="stat-label">Years Mining Industry</span>
+              <span className="stat-label">Years<br />Mining Industry</span>
             </div>
-            <div className="stat-item">
+            <div className="stat-item clean-card">
               <span className="stat-number">4,500+</span>
-              <span className="stat-label">YouTube Subscribers</span>
+              <span className="stat-label">YouTube<br />Subscribers</span>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">12</span>
-              <span className="stat-label">Companies Worked</span>
+            <div className="stat-item clean-card">
+              <span className="stat-number">10+</span>
+              <span className="stat-label">Different Companies<br />has Worked</span>
             </div>
           </div>
           
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => {
-              const contact = document.getElementById('contact');
-              contact.scrollIntoView({ behavior: 'smooth' });
+              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             }}>
               <i className="fas fa-envelope"></i>
               Get In Touch
             </button>
-            <button className="btn-secondary" onClick={() => {
-              window.open('/CV_Dwi_Hery_Purnomo.html', '_blank');
-            }}>
+            <button
+              className="btn-secondary"
+              onClick={() => {
+                const allowedEmails = [
+                  "dwihplanner@gmail.com",
+                  "emailanda2@example.com"
+                ];
+                const userEmail = prompt("Masukkan email Anda untuk mengunduh CV:");
+                if (allowedEmails.includes(userEmail?.trim().toLowerCase())) {
+                  window.open('/CV_Dwi_Hery_Purnomo.html', '_blank');
+                } else {
+                  alert("Email belum terdaftar atau belum disetujui.");
+                }
+              }}
+            >
               <i className="fas fa-download"></i>
               Download CV
             </button>
             <button className="btn-secondary" onClick={() => {
-              const about = document.getElementById('about');
-              about.scrollIntoView({ behavior: 'smooth' });
+              document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
             }}>
               <i className="fas fa-user"></i>
               Learn More
@@ -89,7 +88,7 @@ const HeroSection = () => {
         
         <div className="hero-image">
           <div className="profile-card">
-            {/* Rotating Tech Orbit */}
+            {/* Rotating Tech Icons Around Photo */}
             <div className="rotating-tech-orbit">
               <div className="orbit-item orbit-1" title="R Programming">
                 <i className="fab fa-r-project"></i>
@@ -117,7 +116,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Animated Graphics */}
+            {/* Animated Graphics Background */}
             <div className="graphics-animation">
               <div className="rotating-chart chart-1">
                 <svg viewBox="0 0 100 100" width="60" height="60">
@@ -141,11 +140,21 @@ const HeroSection = () => {
             </div>
 
             <div className="profile-image">
-              <img src="pictures/profile-photo.jpg" alt="Dwi Hery Purnomo - Master of Management" />
+              <img src="pictures/profile-photo.jpg" alt="Dwi Hery Purnomo" />
             </div>
             <div className="profile-badge">
-              <i className="fas fa-graduation-cap"></i>
+              <i className="fas fa-award"></i>
               <span>M.M</span>
+            </div>
+          </div>
+
+          <div className="hero-quote">
+            <div className="quote-container">
+              <i className="fas fa-quote-left quote-icon"></i>
+              <p className="quote-text">
+                "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
+              </p>
+              <cite className="quote-author">— John Naisbitt</cite>
             </div>
           </div>
         </div>
