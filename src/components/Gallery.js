@@ -69,7 +69,7 @@ const Gallery = () => {
       'channel-overview': 'YouTube Channel Overview',
       'maintenance-tutorials': 'Maintenance Tutorials',
       'heavy-equipment': 'Heavy Equipment Content',
-      'predictive-maintenance': 'Predictive Maintenance Videos'
+      'predictive-maintenance-2': 'Predictive Maintenance Videos'
     };
     return titleMap[filename] || filename.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   };
