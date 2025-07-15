@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
           port: 22 # atau 21 jika pakai FTP, sesuaikan dengan Hostinger
-          source: "./*"                # Semua file di repo, bisa diubah
+          source: "https://github.com/Dwihp234/portfolio-react/tree/master/public"                # Semua file di repo, bisa diubah
           target: "public_html"        # Folder tujuan di Hostinger
