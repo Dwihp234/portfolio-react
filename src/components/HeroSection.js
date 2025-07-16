@@ -20,10 +20,21 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Quote repositioned */}
+      <div className="hero-quote">
+        <div className="quote-container">
+          <i className="fas fa-quote-left quote-icon"></i>
+          <p className="quote-text">
+            "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
+          </p>
+          <cite className="quote-author">— John Naisbitt</cite>
+        </div>
+      </div>
+
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text">Dwi smanagat pagii karya Hery Purnomo</span>
+            Hi, I'm <span className="gradient-text">Dwi Hery Purnomo</span>
           </h1>
           
           <h2 className="hero-subtitle">
@@ -43,7 +54,7 @@ const HeroSection = () => {
               <span className="stat-label">Years Experience</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">4,500+</span>
+              <span className="stat-number">3,200+</span>
               <span className="stat-label">YouTube Subscribers</span>
             </div>
             <div className="stat-item">
@@ -133,16 +144,6 @@ const HeroSection = () => {
             <div className="profile-badge">
               <i className="fas fa-award"></i>
               <span>M.M</span>
-            </div>
-          </div>
-
-          <div className="hero-quote">
-            <div className="quote-container">
-              <i className="fas fa-quote-left quote-icon"></i>
-              <p className="quote-text">
-                "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
-              </p>
-              <cite className="quote-author">— John Naisbitt</cite>
             </div>
           </div>
         </div>
