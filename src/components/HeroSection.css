@@ -703,10 +703,12 @@
 
   .stat-item {
     padding: 1rem;
+    color: #fff;
   }
 
   .stat-number {
     font-size: 2rem;
+    color: #4ECDC4;
   }
 
   .hero-buttons {

@@ -31,10 +31,7 @@ const HeroSection = () => {
           </h2>
           
           <p className="hero-description">
-            Outbound Expeditors Inter Island and Country | Inventory & Purchased Cost Control | 
-            Data Advanced Integrated Reporting & Sr.Analyst | Import Handling | RKAB ESDM Annual 
-            Budgeting & Quarterly Reporting (Belanja Barang & Jasa - TKDN) | YouTube Content Creator 
-            with 3,200+ subscribers sharing maintenance management expertise.
+            Maintenance Management Expert | Supply Chain Management Expert | Outbound & Inter-Island Expeditor | Inventory & Cost Control Specialist | Advanced Data & Reporting Analyst | Import Operations Expert | RKAB ESDM Budgeting & Compliance | YouTube Creator (4,500+ subscribers) sharing insights on maintenance management and supply chain excellence.
           </p>
           
           <div className="hero-stats">
@@ -43,12 +40,16 @@ const HeroSection = () => {
               <span className="stat-label">Years Experience</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">3,200+</span>
+              <span className="stat-number">4,500+</span>
               <span className="stat-label">YouTube Subscribers</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">100+</span>
-              <span className="stat-label">Import Operations</span>
+              <span className="stat-number">$2+</span>
+              <span className="stat-label">Smelter Import Equipments</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">10+</span>
+              <span className="stat-label">Arranged Direct Mother Vessel</span>
             </div>
           </div>
           
