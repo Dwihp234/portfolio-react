@@ -210,17 +210,32 @@
     height: 40px;
     font-size: 1rem;
   }
-  .indonesia-map-container {
+}
+
+.indonesia-map-container {
   display: flex;
   justify-content: center;
-  margin: 1.5rem 0 2rem 0;
+  align-items: center;
+  margin: 1.5rem 0 2.5rem 0;
+  width: 100%;
+  background: rgba(48, 12, 125, 0.25); /* lebih transparan */
+  border-radius: 16px;
+  padding: 0.5rem 0;
+  transition: background 0.3s;
 }
 
 .indonesia-map {
-  width: 220px;
+  width: 560px;
   max-width: 90vw;
   height: auto;
-  opacity: 0.92;
-  filter: drop-shadow(0 2px 8px rgba(30,60,114,0.08));
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(30,60,114,0.10);
+  opacity: 0.96;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.indonesia-map:hover {
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(30,60,114,0.18);
+  opacity: 1;
 }
