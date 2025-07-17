@@ -1,3 +1,48 @@
+/* SCM Gallery Styles */
+.scm-gallery {
+  margin: 3rem auto;
+  max-width: 900px;
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2rem 2rem 2.5rem 2rem;
+}
+.dark-mode .scm-gallery {
+  background: #23272f;
+  color: #e0e0e0;
+}
+.scm-gallery h3 {
+  margin-bottom: 0.5rem;
+}
+.scm-gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.scm-gallery-item {
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.dark-mode .scm-gallery-item {
+  background: #23272f;
+  color: #e0e0e0;
+}
+.scm-gallery-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.scm-gallery-desc {
+  padding: 0.5rem 1rem 1rem 1rem;
+  font-size: 1rem;
+}
 /* Gallery Component Styles */
 .gallery {
     padding: 6rem 0;

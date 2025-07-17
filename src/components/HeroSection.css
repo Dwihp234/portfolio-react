@@ -1,3 +1,29 @@
+/* Quote di bawah foto profile */
+.profile-quote {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  font-size: 1.05rem;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%);
+  border-radius: 12px;
+  border: 2px solid #ffd700;
+  padding: 1rem 1.2rem 0.8rem 1.2rem;
+  box-shadow: 0 2px 12px rgba(30,60,114,0.18);
+}
+.profile-quote .quote-icon {
+  color: #ffd700;
+  margin-right: 0.5rem;
+}
+.profile-quote .quote-author {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.95em;
+  color: #ffd700;
+}
 /* Hero Section Styles */
 .hero {
   min-height: 100vh;

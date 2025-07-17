@@ -137,3 +137,23 @@
   color: #666;
   line-height: 1.6;
 }
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #181a1b !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .education-section,
+.dark-mode .gallery-section,
+.dark-mode .youtube-section,
+.dark-mode .achievements-section,
+.dark-mode .contact-section {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .education-item {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}

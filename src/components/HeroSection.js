@@ -1,4 +1,3 @@
-import React from 'react';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -20,16 +19,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Quote repositioned */}
-      <div className="hero-quote">
-        <div className="quote-container">
-          <i className="fas fa-quote-left quote-icon"></i>
-          <p className="quote-text">
-            "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
-          </p>
-          <cite className="quote-author">— John Naisbitt</cite>
-        </div>
-      </div>
 
       <div className="hero-container">
         <div className="hero-content">
@@ -145,6 +134,15 @@ const HeroSection = () => {
               <i className="fas fa-award"></i>
               <span>M.M</span>
             </div>
+          </div>
+          {/* Quote di bawah card foto */}
+          <div className="profile-quote">
+            <i className="fas fa-quote-left quote-icon"></i>
+            <span className="quote-text">
+              "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
+            </span>
+            <br />
+            <span className="quote-author">— John Naisbitt</span>
           </div>
         </div>
       </div>
