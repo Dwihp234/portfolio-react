@@ -68,6 +68,8 @@
 .icon-8 { top: 50%; left: 85%; animation-delay: 14s; }
 .icon-9 { top: 15%; left: 70%; animation-delay: 16s; }
 .icon-10 { top: 85%; right: 10%; animation-delay: 18s; }
+.icon-11 { top: 60%; left: 50%; animation-delay: 20s; }
+.icon-12 { top: 55%; right: 40%; animation-delay: 22s; }
 
 @keyframes float {
   0%, 100% {
@@ -867,14 +869,14 @@
 
 /* Tambahan untuk icon yang mengapung */
 .floating-icons .icon-wrapper i {
-  font-size: 2.5rem;        /* Perbesar icon */
-  color: rgba(201, 189, 189, 0.25); /* Lebih terang, bisa diganti sesuai tema */
+  font-size: 4.5rem;        /* Perbesar icon */
+  color: rgba(243, 237, 237, 0.74); /* Lebih terang, bisa diganti sesuai tema */
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
   transition: color 0.3s;
 }
 
 .floating-icons .icon-wrapper {
-  opacity: 0.7;             /* Tambah opacity */
+  opacity: 0.18;             /* Tambah opacity */
 }
 
 .about-stats.one-row {
@@ -910,4 +912,45 @@
   color: #374151;
   text-align: center;
   margin-top: 0.1rem;
+}
+
+/* AboutSection.css atau HeroSection.css */
+.tech-skills-stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 1.2rem 0;
+  flex-wrap: wrap;
+}
+
+.tech-skill-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30,60,114,0.07);
+  padding: 0.5rem 0.8rem;
+  min-width: 70px;
+  max-width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-skill-icon {
+  font-size: 1.1rem;
+  color: #3b82f6;
+  margin-bottom: 0.1rem;
+}
+
+.tech-skill-number {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #059669;
+  margin-bottom: 0.1rem;
+}
+
+.tech-skill-label {
+  font-size: 0.55rem;
+  color: #374151;
+  text-align: center;
 }

@@ -7,17 +7,22 @@ export default function AboutSection() {
         <h2 className="section-title">About Me</h2>
         <div className="about-content">
           <div className="about-text">
-            <p>
+            {/* <p>
               Welcome! I am Dwi Hery Purnomo, Magister Management, a dedicated professional with over 20+ years
               of experience in Repair & Maintenance Management, Supply Chain Operations, and Import Handling.
               Currently pursuing my Master's degree (M.M) with a background in Economics Management from Universitas Terbuka,
               I'm a father of 4 children with a passion for operational excellence and data analytics.
-            </p>
+            </p> */}
             <div className="about-stats one-row">
               <div className="stat-item">
                 <span className="stat-icon"><i className="fas fa-briefcase"></i></span>
                 <span className="stat-number">25+</span>
                 <span className="stat-label">Years Experience</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-icon"><i className="fas fa-briefcase"></i></span>
+                <span className="stat-number">10+</span>
+                <span className="stat-label">Companies Experience</span>
               </div>
               <div className="stat-item">
                 <span className="stat-icon"><i className="fab fa-youtube"></i></span>
@@ -26,13 +31,13 @@ export default function AboutSection() {
               </div>
               <div className="stat-item">
                 <span className="stat-icon"><i className="fas fa-dolly-flatbed"></i></span>
-                <span className="stat-number">$2+</span>
-                <span className="stat-label">Smelter Import Equipments</span>
+                <span className="stat-number">$2M+</span>
+                <span className="stat-label">Smelter Import Investment</span>
               </div>
               <div className="stat-item">
                 <span className="stat-icon"><i className="fas fa-ship"></i></span>
-                <span className="stat-number">10+</span>
-                <span className="stat-label">Arranged Direct Mother Vessel</span>
+                <span className="stat-number">100+</span>
+                <span className="stat-label">Dealing Import</span>
               </div>
             </div>
           </div>

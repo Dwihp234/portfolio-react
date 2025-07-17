@@ -16,6 +16,8 @@ const HeroSection = () => {
           <div className="icon-wrapper icon-8"><i className="fas fa-cogs"></i></div>
           <div className="icon-wrapper icon-9"><i className="fas fa-analytics"></i></div>
           <div className="icon-wrapper icon-10"><i className="fas fa-microscope"></i></div>
+          <div className="icon-wrapper icon-11"><i className="fab fa-github"></i></div>
+          <div className="icon-wrapper icon-12"><i className="fas fa-code"></i></div> {/* VSCode icon substitute */}
         </div>
       </div>
 
@@ -31,7 +33,8 @@ const HeroSection = () => {
           </h2>
           
           <p className="hero-description">
-            With a Master’s degree in Management and extensive expertise in repair, maintenance, and supply chain management, I am committed to delivering strategic solutions that enhance operational efficiency and drive sustainable business growth across various industries. My strong proficiency in data analysis enables me to integrate and consolidate raw data from multiple departments, transforming it into actionable insights that support top management in making informed, data-driven strategic decisions.
+            With a Master’s degree in Management and extensive expertise in repair maintenance and supply chain management, I am committed to delivering strategic solutions that enhance operational efficiency and drive sustainable business growth across various industries. My strong proficiency in data analysis enables me to integrate and consolidate raw data from multiple departments, transforming it into actionable insights that support top management in making informed, data-driven strategic decisions. In addition, 
+            my long-standing experience as a planner has honed my ability to develop comprehensive plans and ensure effective execution in every project I undertake.
           </p>
           
           

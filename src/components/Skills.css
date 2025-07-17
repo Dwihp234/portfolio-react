@@ -210,4 +210,17 @@
     height: 40px;
     font-size: 1rem;
   }
+  .indonesia-map-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.indonesia-map {
+  width: 220px;
+  max-width: 90vw;
+  height: auto;
+  opacity: 0.92;
+  filter: drop-shadow(0 2px 8px rgba(30,60,114,0.08));
+}
 }

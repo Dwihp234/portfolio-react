@@ -29,7 +29,9 @@ const Skills = () => {
         <p className="skills-description">
           Technical skills and professional expertise developed through 25+ years in mining industry operations.
         </p>
-
+        <div className="indonesia-map-container">
+            <img src="/pictures/skills/skills.png" alt="Peta Indonesia" className="indonesia-map" />
+          </div>
         <div className="skills-grid">
           <div className="skills-column">
             <h3>Technical Skills</h3>

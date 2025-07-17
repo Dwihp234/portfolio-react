@@ -77,6 +77,28 @@ const SkillsSection = () => {
             </div>
           ))}
         </div>
+        <div className="tech-skills-stats">
+          <div className="tech-skill-item">
+            <span className="tech-skill-icon"><i className="fab fa-r-project"></i></span>
+            <span className="tech-skill-number">8+</span>
+            <span className="tech-skill-label">R Projects</span>
+          </div>
+          <div className="tech-skill-item">
+            <span className="tech-skill-icon"><i className="fas fa-chart-bar"></i></span>
+            <span className="tech-skill-number">15+</span>
+            <span className="tech-skill-label">Power BI Dashboards</span>
+          </div>
+          <div className="tech-skill-item">
+            <span className="tech-skill-icon"><i className="fab fa-microsoft"></i></span>
+            <span className="tech-skill-number">20+</span>
+            <span className="tech-skill-label">Excel Models</span>
+          </div>
+          <div className="tech-skill-item">
+            <span className="tech-skill-icon"><i className="fas fa-database"></i></span>
+            <span className="tech-skill-number">10+</span>
+            <span className="tech-skill-label">Data Integrations</span>
+          </div>
+        </div>
       </div>
     </section>
   );
