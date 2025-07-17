@@ -36,10 +36,13 @@ const Navbar = () => {
           <li><button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button></li>
           <li><button onClick={() => scrollToSection('gallery')} className="nav-link">Gallery</button></li>
           <li><button onClick={() => scrollToSection('youtube')} className="nav-link">YouTube</button></li>
+          <li><button onClick={() => scrollToSection('product')} className="nav-link">Product</button></li>
           <li><button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button></li>
-          <li><button className="theme-toggle" onClick={toggleTheme}>
-            {isDarkTheme ? '☀️' : '🌙'}
-          </button></li>
+          <li>
+            <button className="theme-toggle" onClick={toggleTheme}>
+              {isDarkTheme ? '☀️' : '🌙'}
+            </button>
+          </li>
         </ul>
         <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>
