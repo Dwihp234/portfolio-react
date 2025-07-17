@@ -31,27 +31,10 @@ const HeroSection = () => {
           </h2>
           
           <p className="hero-description">
-            Maintenance Management Expert | Supply Chain Management Expert | Outbound & Inter-Island Expeditor | Inventory & Cost Control Specialist | Advanced Data & Reporting Analyst | Import Operations Expert | RKAB ESDM Budgeting & Compliance | YouTube Creator (4,500+ subscribers) sharing insights on maintenance management and supply chain excellence.
+            With a Master’s degree in Management and extensive expertise in repair, maintenance, and supply chain management, I am committed to delivering strategic solutions that enhance operational efficiency and drive sustainable business growth across various industries. My strong proficiency in data analysis enables me to integrate and consolidate raw data from multiple departments, transforming it into actionable insights that support top management in making informed, data-driven strategic decisions.
           </p>
           
-          <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-number">25+</span>
-              <span className="stat-label">Years Experience</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">4,500+</span>
-              <span className="stat-label">YouTube Subscribers</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">$2+</span>
-              <span className="stat-label">Smelter Import Equipments</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">10+</span>
-              <span className="stat-label">Arranged Direct Mother Vessel</span>
-            </div>
-          </div>
+          
           
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => {

@@ -13,16 +13,27 @@ export default function AboutSection() {
               Currently pursuing my Master's degree (M.M) with a background in Economics Management from Universitas Terbuka,
               I'm a father of 4 children with a passion for operational excellence and data analytics.
             </p>
-            {/* ...lanjutkan semua <p> lainnya... */}
-            <div className="stats">
+            <div className="about-stats one-row">
               <div className="stat-item">
-                <div className="stat-icon">
-                  <i className="fas fa-briefcase"></i>
-                </div>
-                <h3>20+</h3>
-                <p>Years Experience</p>
+                <span className="stat-icon"><i className="fas fa-briefcase"></i></span>
+                <span className="stat-number">25+</span>
+                <span className="stat-label">Years Experience</span>
               </div>
-              {/* ...stat-item lain... */}
+              <div className="stat-item">
+                <span className="stat-icon"><i className="fab fa-youtube"></i></span>
+                <span className="stat-number">4,500+</span>
+                <span className="stat-label">YouTube Subscribers</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-icon"><i className="fas fa-dolly-flatbed"></i></span>
+                <span className="stat-number">$2+</span>
+                <span className="stat-label">Smelter Import Equipments</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-icon"><i className="fas fa-ship"></i></span>
+                <span className="stat-number">10+</span>
+                <span className="stat-label">Arranged Direct Mother Vessel</span>
+              </div>
             </div>
           </div>
         </div>
