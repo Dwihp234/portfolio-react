@@ -20,12 +20,22 @@
   gap: 3rem;
 }
 
+/* Tambahan untuk tampilan compact */
+.skills-grid.compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
 .skill-category {
   background: #f8f9fa;
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  min-width: 180px;
+  max-width: 220px;
 }
 
 .skill-category:hover {
@@ -55,11 +65,28 @@
   gap: 1.5rem;
 }
 
+/* Tambahan untuk tampilan compact */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 .skill-item {
   background: white;
   padding: 1.2rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Tambahan untuk tampilan compact */
+.skill-item.compact {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 6px;
 }
 
 .skill-header {
@@ -74,16 +101,34 @@
   margin-right: 0.5rem;
 }
 
+/* Tambahan untuk tampilan compact */
+.skill-icon.compact {
+  font-size: 1.1rem;
+}
+
 .skill-name {
   font-weight: 600;
   color: #333;
   flex: 1;
 }
 
+/* Tambahan untuk tampilan compact */
+.skill-name.compact {
+  flex: 1;
+  font-size: 0.92rem;
+}
+
 .skill-percentage {
   color: #667eea;
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+/* Tambahan untuk tampilan compact */
+.skill-percentage.compact {
+  font-size: 0.85rem;
+  color: #3b82f6;
+  font-weight: 600;
 }
 
 .skill-bar {
@@ -130,6 +175,14 @@
   flex-wrap: wrap;
 }
 
+/* Tambahan untuk tampilan compact */
+.tech-skills-stats.compact {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  margin: 1.2rem 0 0.5rem 0;
+}
+
 .tech-skill-item {
   background: #fff;
   border-radius: 8px;
@@ -142,8 +195,28 @@
   align-items: center;
 }
 
+/* Tambahan untuk tampilan compact */
+.tech-skill-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30,60,114,0.07);
+  padding: 0.3rem 0.7rem;
+  min-width: 60px;
+  max-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tech-skill-icon {
   font-size: 1.1rem;
+  color: #3b82f6;
+  margin-bottom: 0.1rem;
+}
+
+/* Tambahan untuk tampilan compact */
+.tech-skill-icon {
+  font-size: 1rem;
   color: #3b82f6;
   margin-bottom: 0.1rem;
 }
@@ -155,12 +228,25 @@
   margin-bottom: 0.1rem;
 }
 
+/* Tambahan untuk tampilan compact */
+.tech-skill-number {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #059669;
+}
+
 .tech-skill-label {
   font-size: 0.55rem;
   color: #374151;
   text-align: center;
 }
 
+/* Tambahan untuk tampilan compact */
+.tech-skill-label {
+  font-size: 0.5rem;
+  color: #374151;
+  text-align: center;
+}
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
