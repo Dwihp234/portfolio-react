@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0046)http://localhost:3000/CV_Dwi_Hery_Purnomo.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Dwi Hery Purnomo</title>
     <style>
@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px 20px 20px;
             background-color: #f4f4f4;
         }
         .container {
@@ -118,31 +118,62 @@
             }
         }
     </style>
+    <!-- html2pdf.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="cv-content">
+        <div style="display: flex; justify-content: flex-end; align-items: flex-end; gap: 16px; margin-bottom: 18px;">
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 16px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                    <span style="font-size:0.95em; color:#374151;">Download PDF</span>
+                    <button id="download-pdf-btn" style="background:#e5e7eb;color:#374151;border:none;width:36px;height:36px;border-radius:50%;font-size:1.2em;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(60,100,180,0.06);margin-right:4px;">
+                        <span title="Download PDF" style="display:inline-block;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="#374151" d="M12 16a1 1 0 0 1-1-1V5a1 1 0 1 1 2 0v10a1 1 0 0 1-1 1Zm-4.707-3.293a1 1 0 0 1 1.414 0L12 15.586l3.293-2.879a1 1 0 1 1 1.414 1.414l-4 3.5a1 1 0 0 1-1.414 0l-4-3.5a1 1 0 0 1 0-1.414ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
+                        </span>
+                    </button>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px;">
+                    <span style="font-size:0.95em; color:#374151;">Back to Menu</span>
+                    <a href="https://www.dwi.dwihpjavas.id" style="text-decoration:none;">
+                        <button style="background:#e5e7eb;color:#374151;border:none;width:36px;height:36px;border-radius:50%;font-size:1.2em;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(60,100,180,0.06);">
+                            <span title="Kembali ke Menu" style="display:inline-block;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="#374151" d="M12 3a1 1 0 0 1 .707.293l7 7a1 1 0 0 1-1.414 1.414L13 6.414V20a1 1 0 1 1-2 0V6.414l-5.293 5.293A1 1 0 0 1 4.293 10.293l7-7A1 1 0 0 1 12 3Z"/></svg>
+                            </span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="header">
-            <h1>Dwi Hery Purnomo</h1>
-            <h2>Master of Management (M.M)</h2>
-            <h2>Procurement & Outbound Logistics Superintendent</h2>
-            <div class="contact-info">
-                <span>📧 dwihplanner@gmail.com</span>
-                <span>📱 +62 813 8563 9122</span>
-                <span>📍 Jakarta, Indonesia</span>
-                <span>🎥 YouTube: @dwihpjavas</span>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div style="flex: 1;">
+                    <h1>Dwi Hery Purnomo</h1>
+                    <h2>Master of Management (M.M)</h2>
+                    <h2>Procurement &amp; Outbound Logistics Superintendent</h2>
+                    <div class="contact-info">
+                        <span>📧 dwihplanner@gmail.com</span>
+                        <span>📱 +62 813 8563 9122</span>
+                        <span>📍 Jakarta, Indonesia</span>
+                        <span>🎥 YouTube: @dwihpjavas</span>
+                    </div>
+                </div>
+                <div style="margin-left: 30px;">
+                    <img src="pictures/profile-photo.jpg" alt="Profile Photo" style="width:120px; height:120px; object-fit:cover; border-radius:18px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+                </div>
             </div>
         </div>
 
         <div class="section">
             <h3>Professional Summary</h3>
-            <p>Master of Management graduate with 25+ years of comprehensive mining industry experience from Port Operations to Procurement & Outbound Logistics. Currently serving as Procurement & Outbound Logistics Superintendent at PT. Sebuku Iron Lateritic Ores. Expert in Heavy Equipment maintenance, Supply Chain Management, and transforming raw data into management insights using Microsoft Power Query and R Programming for statistical analysis and predictive modeling.</p>
+            <p>Master of Management graduate with 25+ years of comprehensive mining industry experience from Port Operations to Procurement &amp; Outbound Logistics. Currently serving as Procurement &amp; Outbound Logistics Superintendent at PT. Sebuku Iron Lateritic Ores. Expert in Heavy Equipment maintenance, Supply Chain Management, and transforming raw data into management insights using Microsoft Power Query and R Programming for statistical analysis and predictive modeling.</p>
         </div>
 
         <div class="section">
             <h3>Current Position</h3>
             <div class="experience-item">
                 <div class="experience-header">
-                    <div class="position">Procurement & Outbound Logistics Superintendent (V)</div>
+                    <div class="position">Procurement &amp; Outbound Logistics Superintendent (V)</div>
                     <div class="period">Apr 2020 - Present</div>
                 </div>
                 <div class="company">PT. Sebuku Iron Lateritic Ores - Mining Owner</div>
@@ -154,6 +185,7 @@
         <div class="section">
             <h3>Professional Experience</h3>
             
+            
             <div class="experience-item">
                 <div class="experience-header">
                     <div class="position">Expeditor/Scm Engineer (IV)</div>
@@ -164,61 +196,106 @@
                 <p>Supply chain management and expedition coordination for mining operations.</p>
             </div>
 
+            
             <div class="experience-item">
                 <div class="experience-header">
                     <div class="position">Maintenance Planner SPV (IV)</div>
-                    <div class="period">Mar 2011 - Feb 2015</div>
+                    <div class="period">Mar 2011 – Feb 2015</div>
                 </div>
-                <div class="company">PT. Sebuku Iron Lateritic Ores - Mining Owner</div>
+                <div class="company">PT. Sebuku Iron Lateritic Ores – Mining Owner</div>
                 <div class="location">Sebuku, Kalsel</div>
-                <p>Supervised maintenance planning and heavy equipment operations with focus on predictive maintenance strategies.</p>
             </div>
-
             <div class="experience-item">
                 <div class="experience-header">
                     <div class="position">Maintenance Planner Foreman (III)</div>
-                    <div class="period">Sep 2010 - Feb 2011</div>
+                    <div class="period">Sep 2010 – Feb 2011</div>
                 </div>
-                <div class="company">PT. Sebuku Iron Lateritic Ores - Mining Owner</div>
+                <div class="company">PT. Sebuku Iron Lateritic Ores – Mining Owner</div>
                 <div class="location">Sebuku, Kalsel</div>
-                <p>Maintenance planning and equipment reliability management.</p>
             </div>
-
+            
             <div class="experience-item">
                 <div class="experience-header">
-                    <div class="position">Sr. Spv Development Logistic & Maintenance (V)</div>
-                    <div class="period">Jun 2008 - Aug 2010</div>
+                    <div class="position">Sr. Spv Development Logistic &amp; Maintenance (V)</div>
+                    <div class="period">Jun 2008 – Aug 2010</div>
                 </div>
-                <div class="company">PT. Kemakmuran Pertiwi Tambang (Harita) - Mining Owner</div>
+                <div class="company">PT. Kemakmuran Pertiwi Tambang (Harita) – Mining Owner</div>
                 <div class="location">Site Ekor, Haltim</div>
-                <p>Development of logistics and maintenance systems for mining operations.</p>
             </div>
 
+            
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="position">Maintenance Planner SPV (IV)</div>
+                    <div class="period">Dec 2006 – Jun 2007</div>
+                </div>
+                <div class="company">PT. Nipindo Prima Mesin – Mining Contractor</div>
+                <div class="location">Head Office, Jakarta</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="position">Maintenance Planner SPV (IV)</div>
+                    <div class="period">Jun 2007 – Jan 2008</div>
+                </div>
+                <div class="company">PT. Tanjung Lingga (Citra Borneo Indah) – Agro</div>
+                <div class="location">Pangkalanbun, Kalteng</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="position">Maintenance Planner SPV (IV)</div>
+                    <div class="period">Mar 2006 – Nov 2006</div>
+                </div>
+                <div class="company">PT. Roda Nusantara – Mining Contractor</div>
+                <div class="location">Arantiga, Bengkulu</div>
+            </div>
+           
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="position">Store Man (III)</div>
+                    <div class="period">Jul 2004 – Feb 2006</div>
+                </div>
+                <div class="company">PT. Cipta Kridatama (Trakindo) – Mining Contractor</div>
+                <div class="location">Sepuh, Pekanbaru</div>
+            </div>            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="position">Chief Adm PPIC (V)</div>
+                    <div class="period">Jul 2002 – Jul 2004</div>
+                </div>
+                <div class="company">PT. Triowira Kalimantan – Manufacture</div>
+                <div class="location">KBN Marunda, Jakarta</div>
+            </div>
             <div class="experience-item">
                 <div class="experience-header">
                     <div class="position">Port Clerk (II)</div>
-                    <div class="period">Jun 1999 - Feb 2000</div>
+                    <div class="period">Jun 1999 – Feb 2000</div>
                 </div>
-                <div class="company">PT. Citra Pola Niaga Nusantara - Port EMKL</div>
-                <div class="location">Pelb. Priok, Jakarta</div>
-                <p>Port operations and logistics documentation - Starting position.</p>
+                <div class="company">PT. Citra Pola Niaga Nusantara – Port EMKL</div>
+                <div class="location">Pelabuhan Priok, Jakarta</div>
             </div>
-        </div>
-
-        <div class="section">
-            <h3>Education</h3>
             <div class="experience-item">
-                <div class="position">Master of Management (S2)</div>
-                <div class="company">Institut Teknologi Harapan Bangsa</div>
-                <p>Advanced management education with focus on strategic planning and operational excellence.</p>
+                <div class="experience-header">
+                    <div class="position">Mechanic &amp; Electrician (III)</div>
+                    <div class="period">Feb 2000 – Jan 2002</div>
+                </div>
+                <div class="company">PT. JHS Pilling System – Pilling Production</div>
+                <div class="location">Jl. Cacing, Jakarta</div>
+            </div>
+
+           
+            <h3>Formal Education</h3>
+            <div class="experience-item">
+                <div class="position">Master in Management Economics (S2)</div>
+                <div class="company">Institut Technology Harapan Bangsa, Bandung</div>
             </div>
             <div class="experience-item">
                 <div class="position">Bachelor's Degree in Management Economics (S1)</div>
                 <div class="company">Universitas Terbuka, Jakarta</div>
             </div>
             <div class="experience-item">
-                <div class="position">Vocational High School</div>
-                <div class="company">STM Cikini, Jakarta - Industrial Electronics</div>
+                <div class="position">Bachelor's Degree in System Information (On Due) </div>
+                <div class="company">Universitas Terbuka, Jakarta </div>
             </div>
         </div>
 
@@ -226,37 +303,37 @@
             <h3>Core Competencies</h3>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4>Leadership & Management</h4>
+                    <h4>Leadership &amp; Management</h4>
                     <ul>
                         <li>Master of Management (S2)</li>
-                        <li>Strategic Planning & Development</li>
-                        <li>Team Leadership & Supervision</li>
+                        <li>Strategic Planning &amp; Development</li>
+                        <li>Team Leadership &amp; Supervision</li>
                         <li>Continuous Improvement</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h4>Operations & Logistics</h4>
+                    <h4>Operations &amp; Logistics</h4>
                     <ul>
-                        <li>Procurement & Supply Chain Management</li>
+                        <li>Procurement &amp; Supply Chain Management</li>
                         <li>Outbound Logistics Coordination</li>
-                        <li>Heavy Equipment & Plant Department</li>
-                        <li>Import Operations & Handling</li>
+                        <li>Heavy Equipment &amp; Plant Department</li>
+                        <li>Import Operations &amp; Handling</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h4>Data Analytics & Technology</h4>
+                    <h4>Data Analytics &amp; Technology</h4>
                     <ul>
                         <li>R Programming (Statistical Analysis)</li>
-                        <li>Microsoft Power Query & Power BI</li>
+                        <li>Microsoft Power Query &amp; Power BI</li>
                         <li>Predictive Maintenance Analytics</li>
-                        <li>Microsoft Office Suite & Power Pivot</li>
+                        <li>Microsoft Office Suite &amp; Power Pivot</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h4>Industry Expertise</h4>
                     <ul>
-                        <li>Mining Operations & Management</li>
-                        <li>Maintenance Planning & Supervision</li>
+                        <li>Mining Operations &amp; Management</li>
+                        <li>Maintenance Planning &amp; Supervision</li>
                         <li>Equipment Reliability Management</li>
                         <li>Dynamics AX (Microsoft ERP)</li>
                     </ul>
@@ -269,7 +346,7 @@
             <ul>
                 <li>25+ years of progressive career growth from Port Clerk (Level II) to Superintendent (Level V)</li>
                 <li>Extensive experience across 12 companies in mining, manufacturing, and logistics</li>
-                <li>Current leadership role in Procurement & Outbound Logistics at PT. Sebuku Iron Lateritic Ores</li>
+                <li>Current leadership role in Procurement &amp; Outbound Logistics at PT. Sebuku Iron Lateritic Ores</li>
                 <li>Expert in transforming raw data into management insights using advanced analytics</li>
                 <li>Proficient in R Programming for statistical analysis and predictive modeling</li>
                 <li>YouTube content creator with 4,500+ subscribers sharing industry expertise</li>
@@ -282,8 +359,23 @@
             <h3>Additional Information</h3>
             <p><strong>YouTube Channel:</strong> @dwihpjavas with 4,500+ subscribers, sharing mining industry expertise and knowledge</p>
             <p><strong>Languages:</strong> Indonesian (Native), English (Professional Working Proficiency)</p>
-            <p><strong>Interests:</strong> Data Analytics, Continuous Improvement, Knowledge Sharing, Industry Best Practices</p>
+            <p><strong>Interests:</strong> Repair & Maintenance or Supply Chain Dept, Data Analytics, Continuous Improvement, Knowledge Sharing, Industry Best Practices</p>
         </div>
     </div>
+
+
 </body>
+<script>
+document.getElementById('download-pdf-btn').addEventListener('click', function () {
+    var element = document.getElementById('cv-content');
+    var opt = {
+        margin:       0.2,
+        filename:     'CV_Dwi_Hery_Purnomo.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(element).save();
+});
+</script>
 </html>
