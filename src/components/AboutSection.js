@@ -1,4 +1,3 @@
-import React from 'react';
 import './AboutSection.css';
 import ProductSection from './ProductSection';
 
