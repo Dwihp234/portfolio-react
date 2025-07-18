@@ -799,8 +799,18 @@
   }
 
   .professional-photo {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
+  }
+
+  .profile-badge {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 0.95rem;
+    /* Geser lebih ke bawah dan ke kanan agar tidak menutupi wajah */
+    transform: translateY(20px) translateX(10px);
   }
 
   .quote-text {
