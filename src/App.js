@@ -5,12 +5,14 @@ import ContactSection from "./components/ContactSection";
 import FloatingContact from "./components/FloatingContact";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
+// import GallerySCM from "./components/GallerySCM";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import YouTubeSection from "./components/YouTubeSection";
+import SkillChart from "./components/SkillChart";
 
 function App() {
   return (
@@ -20,8 +22,10 @@ function App() {
         <HeroSection />
         <About />
         <Skills />
+        <SkillChart />
         <Projects />
         <Gallery />
+        {/* <GallerySCM /> */}
         <YouTubeSection />
         <Product />
         <ContactSection />

@@ -1,3 +1,4 @@
+import React from 'react';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -16,11 +17,19 @@ const HeroSection = () => {
           <div className="icon-wrapper icon-8"><i className="fas fa-cogs"></i></div>
           <div className="icon-wrapper icon-9"><i className="fas fa-analytics"></i></div>
           <div className="icon-wrapper icon-10"><i className="fas fa-microscope"></i></div>
-          <div className="icon-wrapper icon-11"><i className="fab fa-github"></i></div>
-          <div className="icon-wrapper icon-12"><i className="fas fa-code"></i></div> {/* VSCode icon substitute */}
         </div>
       </div>
 
+      {/* Quote repositioned */}
+      <div className="hero-quote">
+        <div className="quote-container">
+          <i className="fas fa-quote-left quote-icon"></i>
+          <p className="quote-text">
+            "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
+          </p>
+          <cite className="quote-author">— John Naisbitt</cite>
+        </div>
+      </div>
 
       <div className="hero-container">
         <div className="hero-content">
@@ -33,11 +42,26 @@ const HeroSection = () => {
           </h2>
           
           <p className="hero-description">
-            With a Master’s degree in Management and extensive expertise in repair maintenance and supply chain management, I am committed to delivering strategic solutions that enhance operational efficiency and drive sustainable business growth across various industries. My strong proficiency in data analysis enables me to integrate and consolidate raw data from multiple departments, transforming it into actionable insights that support top management in making informed, data-driven strategic decisions. In addition, 
-            my long-standing experience as a planner has honed my ability to develop comprehensive plans and ensure effective execution in every project I undertake.
+            Outbound Expeditors Inter Island and Country | Inventory & Purchased Cost Control | 
+            Data Advanced Integrated Reporting & Sr.Analyst | Import Handling | RKAB ESDM Annual 
+            Budgeting & Quarterly Reporting (Belanja Barang & Jasa - TKDN) | YouTube Content Creator 
+            with 3,200+ subscribers sharing maintenance management expertise.
           </p>
           
-          
+          <div className="hero-stats">
+            <div className="stat-item">
+              <span className="stat-number">25+</span>
+              <span className="stat-label">Years Experience</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">3,200+</span>
+              <span className="stat-label">YouTube Subscribers</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">100+</span>
+              <span className="stat-label">Import Operations</span>
+            </div>
+          </div>
           
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => {
@@ -121,15 +145,6 @@ const HeroSection = () => {
               <i className="fas fa-award"></i>
               <span>M.M</span>
             </div>
-          </div>
-          {/* Quote di bawah card foto */}
-          <div className="profile-quote">
-            <i className="fas fa-quote-left quote-icon"></i>
-            <span className="quote-text">
-              "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
-            </span>
-            <br />
-            <span className="quote-author">— John Naisbitt</span>
           </div>
         </div>
       </div>

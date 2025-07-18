@@ -1,25 +1,34 @@
-
 const scmImages = [
   {
-    src: '/gallery/SCM/cost-optimization.jpg',
-    alt: 'Cost Optimization',
-    desc: 'Cost Optimization in Supply Chain'
+    src: '/gallery/SCM/import-operations.jpg',
+    alt: 'Import Operations Dashboard',
+    desc: 'Import Operations Dashboard'
   },
   {
-    src: '/gallery/SCM/inventory.jpg',
-    alt: 'Inventory Management',
-    desc: 'Inventory Management & Analytics'
+    src: '/gallery/SCM/expedition-management.jpg',
+    alt: 'Expedition Management',
+    desc: 'Expedition Management'
   },
   {
-    src: '/gallery/SCM/logistics-dashboard.jpg',
-    alt: 'Logistics Dashboard',
-    desc: 'Logistics Dashboard & Expedition'
+    src: '/gallery/SCM/procurement-analytics.jpg',
+    alt: 'Procurement Analytics',
+    desc: 'Procurement Analytics'
   },
   {
-    src: '/gallery/SCM/supplier-performance.jpg',
-    alt: 'Supplier Performance',
-    desc: 'Supplier Performance Monitoring'
+    src: '/gallery/SCM/sebuku-logistics.jpg',
+    alt: 'Sebuku Island Logistics',
+    desc: 'Sebuku Island Logistics'
   },
+  {
+    src: '/gallery/SCM/customs-clearance.jpg',
+    alt: 'Customs Clearance Process',
+    desc: 'Customs Clearance Process'
+  },
+  {
+    src: '/gallery/SCM/kpi-reporting.jpg',
+    alt: 'KPI Reporting Dashboard',
+    desc: 'KPI Reporting Dashboard'
+  }
 ];
 
 const GallerySection = () => {
@@ -36,7 +45,9 @@ const GallerySection = () => {
           <div className="scm-gallery-images">
             {scmImages.map((img, idx) => (
               <div className="scm-gallery-item" key={idx}>
-                <img src={img.src} alt={img.alt} />
+                <div className="scm-image-container">
+                  <img src={img.src} alt={img.alt} />
+                </div>
                 <div className="scm-gallery-desc">{img.desc}</div>
               </div>
             ))}

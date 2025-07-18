@@ -114,12 +114,13 @@ const Gallery = () => {
       category: "scm",
       folder: "SCM",
       images: [
-        "/gallery/SCM/import-operations.jpg",
+        "/gallery/SCM/PRPO1.png",
         "/gallery/SCM/expedition-management.jpg",
         "/gallery/SCM/procurement-analytics.jpg",
         "/gallery/SCM/sebuku-logistics.jpg",
         "/gallery/SCM/customs-clearance.jpg",
         "/gallery/SCM/kpi-reporting.jpg"
+        
       ],
       technologies: ["Power BI", "SAP", "Dynamics AX", "Excel", "RKAB System"],
       type: "Department Analytics",
@@ -278,9 +279,9 @@ const Gallery = () => {
           <div className="images-grid scm-gallery">
             {galleryData[1].images.map((image, index) => (
               <div key={index} className="image-item scm-item">
-                <div className="scm-image-container" onClick={() => openImageModal(`/gallery${image}`, getImageTitle(image))}>
+                <div className="scm-image-container" onClick={() => openImageModal(image, getImageTitle(image))}>
                   <img 
-                    src={`/gallery${image}`} 
+                    src={image} 
                     alt={getImageTitle(image)}
                     onError={(e) => {
                       e.target.style.display = 'none';
