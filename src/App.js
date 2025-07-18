@@ -1,17 +1,16 @@
-import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
 import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Gallery from "./components/Gallery";
-import YouTubeSection from "./components/YouTubeSection";
-import Product from "./components/Product";
 import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
 import FloatingContact from "./components/FloatingContact";
+import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
+import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
+import Product from "./components/Product";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import YouTubeSection from "./components/YouTubeSection";
 
 function App() {
   return (
