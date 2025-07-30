@@ -20,16 +20,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Quote repositioned */}
-      <div className="hero-quote">
-        <div className="quote-container">
-          <i className="fas fa-quote-left quote-icon"></i>
-          <p className="quote-text">
-            "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
-          </p>
-          <cite className="quote-author">— John Naisbitt</cite>
-        </div>
-      </div>
+
 
       <div className="hero-container">
         <div className="hero-content">
@@ -42,26 +33,36 @@ const HeroSection = () => {
           </h2>
           
           <p className="hero-description">
-            Outbound Expeditors Inter Island and Country | Inventory & Purchased Cost Control | 
-            Data Advanced Integrated Reporting & Sr.Analyst | Import Handling | RKAB ESDM Annual 
-            Budgeting & Quarterly Reporting (Belanja Barang & Jasa - TKDN) | YouTube Content Creator 
-            with 3,200+ subscribers sharing maintenance management expertise.
+           With a Master’s degree in Management and extensive expertise in repair maintenance and supply chain management, I am committed to delivering strategic solutions that enhance operational efficiency and drive sustainable business growth across various industries. My strong proficiency in data analysis enables me to integrate and consolidate raw data from multiple departments, transforming it into actionable insights that support top management in making informed, data-driven strategic decisions. In addition, my long-standing experience as a planner has honed my ability to develop comprehensive plans and ensure effective execution in every project I undertake.
           </p>
           
-          <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-number">25+</span>
-              <span className="stat-label">Years Experience</span>
+          {/* <div className="hero-stats about-horizontal-stats">
+            <div className="about-stat-card">
+              <div className="about-stat-icon"><i className="fas fa-briefcase"></i></div>
+              <div className="about-stat-number">25+</div>
+              <div className="about-stat-label">Years Experience</div>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">3,200+</span>
-              <span className="stat-label">YouTube Subscribers</span>
+            <div className="about-stat-card">
+              <div className="about-stat-icon"><i className="fas fa-building"></i></div>
+              <div className="about-stat-number">10+</div>
+              <div className="about-stat-label">Companies Experience</div>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">100+</span>
-              <span className="stat-label">Import Operations</span>
+            <div className="about-stat-card">
+              <div className="about-stat-icon"><i className="fab fa-youtube"></i></div>
+              <div className="about-stat-number">4,500+</div>
+              <div className="about-stat-label">YouTube Subscribers</div>
             </div>
-          </div>
+            <div className="about-stat-card">
+              <div className="about-stat-icon"><i className="fas fa-dolly-flatbed"></i></div>
+              <div className="about-stat-number">$2M+</div>
+              <div className="about-stat-label">Smelter Import Investment</div>
+            </div>
+            <div className="about-stat-card">
+              <div className="about-stat-icon"><i className="fas fa-ship"></i></div>
+              <div className="about-stat-number">100+</div>
+              <div className="about-stat-label">Dealing Import</div>
+            </div>
+          </div> */}
           
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => {
@@ -144,6 +145,16 @@ const HeroSection = () => {
             <div className="profile-badge">
               <i className="fas fa-award"></i>
               <span>M.M</span>
+            </div>
+          </div>
+          {/* Quote dipindah ke bawah profile-card */}
+          <div className="hero-quote">
+            <div className="quote-container">
+              <i className="fas fa-quote-left quote-icon"></i>
+              <p className="quote-text">
+                "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
+              </p>
+              <cite className="quote-author">— John Naisbitt</cite>
             </div>
           </div>
         </div>

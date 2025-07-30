@@ -57,8 +57,8 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: "Healthcare Analytics Dashboard",
-      description: "Real-time healthcare analytics dashboard for patient monitoring and resource optimization in medical facilities.",
+      title: "Heavy Equipment Analytics Dashboard",
+      description: "Real-time analytics dashboard for monitoring, analyzing, and optimizing heavy equipment operations to achieve significant cost reduction and efficiency improvement.",
       image: "/api/placeholder/400/250",
       technologies: ["R", "Shiny", "MySQL", "D3.js"],
       category: "visualization",

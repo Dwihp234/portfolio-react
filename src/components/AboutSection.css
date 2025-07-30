@@ -1,3 +1,81 @@
+/* Two column layout */
+.about-content-2col {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.about-left {
+  flex: 2;
+  min-width: 320px;
+}
+.about-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.about-photo-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0;
+}
+.about-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: #ffe600;
+  color: #222;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.about-quote {
+  background: #184b8a;
+  color: #fff;
+  border-radius: 16px;
+  border: 3px solid #ffe600;
+  padding: 24px 28px;
+  font-size: 1.1rem;
+  max-width: 340px;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: left;
+  position: relative;
+}
+.quote-icon {
+  color: #ffe600;
+  font-size: 2rem;
+  margin-right: 8px;
+}
+.quote-text {
+  font-style: italic;
+  margin: 0 0 8px 0;
+}
+.quote-author {
+  color: #ffe600;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.highlight {
+  color: #ffe600;
+}
 /* About Section Styles */
 .about-section {
   padding: 5rem 0;

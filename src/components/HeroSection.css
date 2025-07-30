@@ -1,3 +1,88 @@
+/* About Me Horizontal Stats */
+.about-horizontal-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.2rem;
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.about-stat-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(30,60,114,0.10);
+  padding: 1.1rem 1.5rem 1.2rem 1.5rem;
+  min-width: 120px;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.about-stat-card:hover {
+  box-shadow: 0 6px 24px rgba(255,0,0,0.13);
+  transform: translateY(-6px) scale(1.04);
+}
+.about-stat-icon {
+  width: 60px;
+  height: 60px;
+  background: #f00;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 8px rgba(255,0,0,0.10);
+}
+.about-stat-number {
+  color: #f00;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  margin-top: 0.1rem;
+  letter-spacing: 0.5px;
+}
+.about-stat-label {
+  color: #222;
+  font-size: 0.98rem;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 900px) {
+  .about-horizontal-stats {
+    gap: 1.1rem;
+  }
+  .about-stat-card {
+    min-width: 90px;
+    max-width: 120px;
+    padding: 0.7rem 0.7rem 0.8rem 0.7rem;
+  }
+  .about-stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  .about-stat-number {
+    font-size: 1.1rem;
+  }
+  .about-stat-label {
+    font-size: 0.8rem;
+  }
+}
 /* Quote di bawah foto profile */
 .profile-quote {
   margin-top: 1.5rem;
@@ -91,21 +176,25 @@
 }
 
 /* Quote repositioned - not too high */
+
 .hero-quote {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 1.2rem;
 }
 
 .quote-container {
   width: 100%;
-  max-width: 260px; /* samakan dengan lebar foto/card */
+  max-width: 250px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 15px;
-  padding: 1rem 1.2rem;
+  background: #5771b9;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1rem 0.6rem 1rem;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  position: relative;
 }
 
 @keyframes slideInFromRight {
@@ -119,20 +208,23 @@
   }
 }
 
+
 .quote-icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #ffd700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   display: block;
 }
 
+
 .quote-text {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.4;
   font-style: italic;
-  margin-bottom: 0.75rem;
-  color: #f0f0f0;
+  margin-bottom: 0.7rem;
+  color: #fff;
 }
+
 
 .quote-author {
   font-size: 0.85rem;
@@ -140,6 +232,7 @@
   font-weight: 600;
   text-align: right;
   display: block;
+  margin-top: 0.1rem;
 }
 
 .hero-container {
@@ -374,9 +467,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 0;           /* Pastikan tidak ada margin atas */
-  align-self: flex-start;   /* Paksa naik ke atas grid cell */
 }
 
 .profile-quote {
@@ -635,28 +725,6 @@
     min-height: 100vh;
   }
 
-  .hero-quote {
-    position: static;
-    max-width: 100%;
-    margin-bottom: 2rem;
-    order: -1;
-  }
-
-  .quote-container {
-    padding: 1rem;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .quote-text {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-
-  .quote-author {
-    font-size: 0.75rem;
-  }
-
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -768,6 +836,45 @@
   .icon-wrapper {
     font-size: 2rem;
     opacity: 0.05;
+  }
+
+  /* QUOTE: Tetap di bawah profile dan lebih kecil */
+  .hero-image {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-quote {
+    order: 2;
+    margin-top: 0.7rem;
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    justify-content: center;
+  }
+  .quote-container {
+    padding: 0.6rem 0.7rem 0.5rem 0.7rem;
+    max-width: 200px;
+    font-size: 0.85rem;
+  }
+  .quote-text {
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+  .quote-author {
+    font-size: 0.7rem;
+  }
+
+  /* Badge M.M lebih kecil */
+  .profile-badge {
+    min-width: 38px;
+    min-height: 38px;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  .profile-badge span {
+    font-size: 0.85em;
   }
 }
 
