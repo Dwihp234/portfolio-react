@@ -12,6 +12,8 @@ import Product from "./components/Product";
 import Projects from "./components/Projects";
 import YouTubeSection from "./components/YouTubeSection";
 import Experience from "./components/Experience";
+import { CrossExperience } from "./components/Experience";
+import SkillSection from "./components/Skills";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Navbar />
         <HeroSection />
         <About />
+        <SkillSection />
+        <CrossExperience />
         <SCMGallery />
         <div id="experience">
           <Experience />
