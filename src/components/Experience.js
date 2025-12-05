@@ -1,23 +1,122 @@
-// import React from 'react';
-// import './Experience.css';
+import React from 'react';
+import './Experience.css';
 
-// const Experience = () => {
-//   const experiences = [
-//     {
-//       period: "Apr 2020 - Present",
-//       position: "Procurement & Outbound Logistics Superintendent",
-//       company: "PT. Sebuku Iron Lateritic Ores",
-//       location: "Head Office, Jakarta",
-//       type: "current",
-//       description: "Leading procurement operations and outbound logistics coordination for iron lateritic ore mining operations with focus on strategic supply chain management and cost optimization.",
-//       achievements: [
-//         "Oversee procurement strategy and vendor management across multiple suppliers",
-//         "Coordinate outbound logistics and shipment operations for iron ore exports",
-//         "Implement cost optimization initiatives resulting in significant savings",
-//         "Manage supply chain risk assessment and regulatory compliance",
-//         "Lead cross-functional teams to ensure operational excellence"
-//       ]
-//     },
+const Experience = () => {
+	const experiences = [
+		{
+			period: "Apr 2020 - Present",
+			position: "Procurement & Outbound Logistics Superintendent (V)",
+			company: "PT. Sebuku Iron Lateritic Ores - Mining Owner",
+			location: "Head Office, Jakarta",
+			type: "current",
+			description: "Leading procurement operations and outbound logistics coordination for iron lateritic ore mining operations, overseeing supply chain strategy, vendor management, and cost optimization initiatives.",
+			achievements: [
+				"Oversee procurement strategy and vendor management",
+				"Coordinate outbound logistics and shipment operations",
+				"Implement cost optimization initiatives",
+				"Manage supply chain risk assessment and regulatory compliance"
+			]
+		},
+		{
+			period: "Mar 2015 - Mar 2020",
+			position: "Expeditor/Scm Engineer (IV)",
+			company: "PT. Sebuku Iron Lateritic Ores - Mining Owner",
+			location: "Head Office, Jakarta",
+			type: "past",
+			description: "Supply chain management and expedition coordination for mining operations.",
+			achievements: ["Expedition coordination and supply chain management for mining operations"]
+		},
+		{
+			period: "Mar 2011 – Feb 2015",
+			position: "Maintenance Planner SPV (IV)",
+			company: "PT. Sebuku Iron Lateritic Ores – Mining Owner",
+			location: "Sebuku, Kalsel",
+			type: "past",
+			description: "Supervised maintenance planning operations and heavy equipment management.",
+			achievements: ["Maintenance planning and equipment management"]
+		},
+		{
+			period: "Sep 2010 – Feb 2011",
+			position: "Maintenance Planner Foreman (III)",
+			company: "PT. Sebuku Iron Lateritic Ores – Mining Owner",
+			location: "Sebuku, Kalsel",
+			type: "past",
+			description: "Led maintenance planning operations and equipment reliability management.",
+			achievements: ["Maintenance planning and reliability management"]
+		},
+		{
+			period: "Jun 2008 – Aug 2010",
+			position: "Sr. Spv Development Logistic & Maintenance (V)",
+			company: "PT. Kemakmuran Pertiwi Tambang (Harita) – Mining Owner",
+			location: "Site Ekor, Haltim",
+			type: "past",
+			description: "Led development of integrated logistics and maintenance systems for new mining operations.",
+			achievements: ["Development of logistics and maintenance systems"]
+		},
+		{
+			period: "Dec 2006 – Jun 2007",
+			position: "Maintenance Planner SPV (IV)",
+			company: "PT. Nipindo Prima Mesin – Mining Contractor",
+			location: "Head Office, Jakarta",
+			type: "past",
+			description: "Supervised maintenance planning operations for mining contractor services.",
+			achievements: ["Maintenance planning for mining contractor"]
+		},
+		{
+			period: "Jun 2007 – Jan 2008",
+			position: "Maintenance Planner SPV (IV)",
+			company: "PT. Tanjung Lingga (Citra Borneo Indah) – Agro",
+			location: "Pangkalanbun, Kalteng",
+			type: "past",
+			description: "Managed maintenance planning for agricultural and processing equipment.",
+			achievements: ["Maintenance planning for agro industry"]
+		},
+		{
+			period: "Mar 2006 – Nov 2006",
+			position: "Maintenance Planner SPV (IV)",
+			company: "PT. Roda Nusantara – Mining Contractor",
+			location: "Arantiga, Bengkulu",
+			type: "past",
+			description: "Supervised maintenance planning operations for mining contractor services.",
+			achievements: ["Maintenance planning for mining contractor"]
+		},
+		{
+			period: "Jul 2004 – Feb 2006",
+			position: "Store Man (III)",
+			company: "PT. Cipta Kridatama (Trakindo) – Mining Contractor",
+			location: "Sepuh, Pekanbaru",
+			type: "past",
+			description: "Managed store operations and inventory for mining contractor.",
+			achievements: ["Store operations and inventory management"]
+		},
+		{
+			period: "Jul 2002 – Jul 2004",
+			position: "Chief Adm PPIC (V)",
+			company: "PT. Triowira Kalimantan – Manufacture",
+			location: "KBN Marunda, Jakarta",
+			type: "past",
+			description: "Chief administration for production planning and inventory control.",
+			achievements: ["Production planning and inventory control"]
+		},
+		{
+			period: "Jun 1999 – Feb 2000",
+			position: "Port Clerk (II)",
+			company: "PT. Citra Pola Niaga Nusantara – Port EMKL",
+			location: "Pelabuhan Priok, Jakarta",
+			type: "past",
+			description: "Port operations and logistics documentation.",
+			achievements: ["Port operations and documentation"]
+		},
+		{
+			period: "Feb 2000 – Jan 2002",
+			position: "Mechanic & Electrician (III)",
+			company: "PT. JHS Pilling System – Pilling Production",
+			location: "Jl. Cacing, Jakarta",
+			type: "past",
+			description: "Mechanic and electrician for pilling production.",
+			achievements: ["Mechanic and electrician work"]
+		}
+	];
 //     {
 //       period: "Mar 2015 - Mar 2020",
 //       position: "Expeditor/Supply Chain Management Engineer",
@@ -136,132 +235,54 @@
 //     }
 //   ];
 
-//   return (
-//     <section id="experience" className="experience">
-//       <div className="container">
-//         <h2 className="section-title">Work Experience</h2>
-//         <p className="experience-description">
-//           My professional journey and key achievements in mining industry operations, 
-//           spanning 25+ years from Port Operations to Procurement & Outbound Logistics Superintendent.
-//         </p>
+	return (
+		<section id="experience" className="experience">
+			<div className="container">
+				<h2 className="section-title">Work Experience</h2>
+				<div className="experience-highlights">
+					<h3>Career Progression Highlights</h3>
+					<div className="highlights-grid">
+						<div className="highlight-item">
+							<div className="highlight-icon">
+								<i className="fas fa-user-tie"></i>
+							</div>
+							<div className="highlight-content">
+								<h4>Leadership Development</h4>
+								<p>Progressed from Port Clerk to Superintendent level, demonstrating consistent leadership growth and operational excellence.</p>
+							</div>
+						</div>
+						<div className="highlight-item">
+							<div className="highlight-icon">
+								<i className="fas fa-tools"></i>
+							</div>
+							<div className="highlight-content">
+								<h4>Technical Expertise</h4>
+								<p>Developed deep expertise in heavy equipment maintenance, predictive analytics, and supply chain optimization.</p>
+							</div>
+						</div>
+						<div className="highlight-item">
+							<div className="highlight-icon">
+								<i className="fas fa-chart-bar"></i>
+							</div>
+							<div className="highlight-content">
+								<h4>Data-Driven Decisions</h4>
+								<p>Implemented R Programming and Power Query analytics to transform raw data into actionable management insights.</p>
+							</div>
+						</div>
+						<div className="highlight-item">
+							<div className="highlight-icon">
+								<i className="fas fa-handshake"></i>
+							</div>
+							<div className="highlight-content">
+								<h4>Strategic Partnerships</h4>
+								<p>Built strong relationships with international suppliers and stakeholders across diverse mining operations.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
 
-//         <div className="experience-summary">
-//           <div className="summary-item">
-//             <div className="summary-icon">
-//               <i className="fas fa-calendar-alt"></i>
-//             </div>
-//             <div className="summary-info">
-//               <h4>25+ Years</h4>
-//               <p>Mining Industry Experience</p>
-//             </div>
-//           </div>
-//           <div className="summary-item">
-//             <div className="summary-icon">
-//               <i className="fas fa-building"></i>
-//             </div>
-//             <div className="summary-info">
-//               <h4>12 Companies</h4>
-//               <p>Diverse Industry Experience</p>
-//             </div>
-//           </div>
-//           <div className="summary-item">
-//             <div className="summary-icon">
-//               <i className="fas fa-chart-line"></i>
-//             </div>
-//             <div className="summary-info">
-//               <h4>Level II to V</h4>
-//               <p>Progressive Career Growth</p>
-//             </div>
-//           </div>
-//           <div className="summary-item">
-//             <div className="summary-icon">
-//               <i className="fas fa-map-marked-alt"></i>
-//             </div>
-//             <div className="summary-info">
-//               <h4>Multiple Islands</h4>
-//               <p>Jakarta, Kalimantan, Halmahera</p>
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="experience-timeline">
-//           {experiences.map((exp, index) => (
-//             <div key={index} className={`experience-item ${exp.type}`}>
-//               <div className="experience-marker">
-//                 <div className="marker-dot"></div>
-//                 {index < experiences.length - 1 && <div className="marker-line"></div>}
-//               </div>
-//               <div className="experience-content">
-//                 <div className="experience-header">
-//                   <h3 className="experience-position">{exp.position}</h3>
-//                   <span className="experience-period">{exp.period}</span>
-//                 </div>
-//                 <div className="experience-company">
-//                   <i className="fas fa-building"></i>
-//                   <span>{exp.company}</span>
-//                 </div>
-//                 <div className="experience-location">
-//                   <i className="fas fa-map-marker-alt"></i>
-//                   <span>{exp.location}</span>
-//                 </div>
-//                 <p className="experience-description">{exp.description}</p>
-//                 <div className="experience-achievements">
-//                   <h4>Key Achievements:</h4>
-//                   <ul>
-//                     {exp.achievements.map((achievement, i) => (
-//                       <li key={i}>{achievement}</li>
-//                     ))}
-//                   </ul>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-
-//         <div className="experience-highlights">
-//           <h3>Career Progression Highlights</h3>
-//           <div className="highlights-grid">
-//             <div className="highlight-item">
-//               <div className="highlight-icon">
-//                 <i className="fas fa-user-tie"></i>
-//               </div>
-//               <div className="highlight-content">
-//                 <h4>Leadership Development</h4>
-//                 <p>Progressed from Port Clerk to Superintendent level, demonstrating consistent leadership growth and operational excellence.</p>
-//               </div>
-//             </div>
-//             <div className="highlight-item">
-//               <div className="highlight-icon">
-//                 <i className="fas fa-tools"></i>
-//               </div>
-//               <div className="highlight-content">
-//                 <h4>Technical Expertise</h4>
-//                 <p>Developed deep expertise in heavy equipment maintenance, predictive analytics, and supply chain optimization.</p>
-//               </div>
-//             </div>
-//             <div className="highlight-item">
-//               <div className="highlight-icon">
-//                 <i className="fas fa-chart-bar"></i>
-//               </div>
-//               <div className="highlight-content">
-//                 <h4>Data-Driven Decisions</h4>
-//                 <p>Implemented R Programming and Power Query analytics to transform raw data into actionable management insights.</p>
-//               </div>
-//             </div>
-//             <div className="highlight-item">
-//               <div className="highlight-icon">
-//                 <i className="fas fa-handshake"></i>
-//               </div>
-//               <div className="highlight-content">
-//                 <h4>Strategic Partnerships</h4>
-//                 <p>Built strong relationships with international suppliers and stakeholders across diverse mining operations.</p>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Experience;
+export default Experience;

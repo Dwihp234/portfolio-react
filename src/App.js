@@ -12,6 +12,9 @@ import Product from "./components/Product";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import YouTubeSection from "./components/YouTubeSection";
+import Experience from "./components/Experience";
+
+
 import SkillChart from "./components/SkillChart";
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
         <About />
         <Skills />
         <SkillChart />
+        <div id="experience">
+          <Experience />
+        </div>
         <Projects />
         <Gallery />
         {/* <GallerySCM /> */}

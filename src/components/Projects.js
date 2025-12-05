@@ -6,54 +6,24 @@ const Projects = () => {
 
   const projectsData = [
     {
-      id: 1,
-      title: "Customer Segmentation Analysis",
-      description: "Advanced customer segmentation using machine learning algorithms to identify distinct customer groups for targeted marketing strategies.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Python", "Scikit-learn", "Pandas", "Tableau"],
-      category: "analytics",
-      githubLink: "#",
-      liveLink: "#"
-    },
-    {
-      id: 2,
-      title: "Sales Forecasting Dashboard",
-      description: "Interactive dashboard for sales forecasting using time series analysis and predictive modeling with real-time data visualization.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Power BI", "Python", "SQL", "Azure"],
-      category: "visualization",
-      githubLink: "#",
-      liveLink: "#"
-    },
-    {
-      id: 3,
-      title: "Market Research Analytics",
-      description: "Comprehensive market research analysis with sentiment analysis, trend identification, and competitive intelligence.",
-      image: "/api/placeholder/400/250",
-      technologies: ["R", "ggplot2", "Shiny", "NLP"],
-      category: "research",
-      githubLink: "#",
-      liveLink: "#"
-    },
-    {
-      id: 4,
-      title: "Financial Risk Assessment",
-      description: "Risk assessment model for financial portfolios using statistical analysis and machine learning algorithms.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Python", "TensorFlow", "Matplotlib", "SQL"],
-      category: "finance",
-      githubLink: "#",
-      liveLink: "#"
-    },
-    {
       id: 5,
-      title: "Supply Chain Optimization",
-      description: "Data-driven supply chain optimization analysis to reduce costs and improve efficiency using predictive analytics.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Python", "Apache Spark", "Tableau", "SQL"],
+      title: "Supply Chain Management Department",
+      description: "Import Operations, Expedition Management, Procurement Analytics, and Multi-modal Transportation coordination for Sebuku Island operations using enterprise systems and business intelligence tools.",
+      image: "/images/scm-expedition-management.jpg", // Update with actual image path if available
+      technologies: ["Power BI", "SAP", "Dynamics AX", "Excel", "RKAB System"],
       category: "analytics",
-      githubLink: "#",
-      liveLink: "#"
+      githubLink: "#", // Update with actual GitHub link if available
+      liveLink: "#", // Update with actual live demo link if available
+      extra: {
+        keyOperations: [
+          "Master List & Tax Exemption",
+          "Sebuku Island Logistics",
+          "LCT & Barge Operations",
+          "Procurement KPI Management",
+          "Import Documentation",
+          "RKAB Budgeting & Reporting"
+        ]
+      }
     },
     {
       id: 6,
@@ -134,16 +104,25 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                
                 <div className="project-technologies">
                   {project.technologies.map((tech, index) => (
                     <span key={index} className="tech-tag">{tech}</span>
                   ))}
                 </div>
+                {/* SCM Key Operations Section */}
+                {project.extra && project.extra.keyOperations && (
+                  <div className="scm-key-operations">
+                    <h4>Key SCM Operations:</h4>
+                    <div className="scm-operations-list">
+                      {project.extra.keyOperations.map((op, idx) => (
+                        <div key={idx} className="scm-operation-item">{op}</div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
