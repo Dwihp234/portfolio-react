@@ -5,14 +5,13 @@ import ContactSection from "./components/ContactSection";
 import FloatingContact from "./components/FloatingContact";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
-import SCMGallery from "./components/SCMGallery";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import Projects from "./components/Projects";
+import SCMGallery from "./components/SCMGallery";
 import YouTubeSection from "./components/YouTubeSection";
 import Experience from "./components/Experience";
-import { CrossExperience } from "./components/Experience";
 import SkillSection from "./components/Skills";
 
 function App() {
@@ -23,12 +22,8 @@ function App() {
         <HeroSection />
         <About />
         <SkillSection />
-        <CrossExperience />
-        <SCMGallery />
-        <div id="experience">
-          <Experience />
-        </div>
         <Projects />
+        <SCMGallery />
         <Gallery />
         <YouTubeSection />
         <Product />

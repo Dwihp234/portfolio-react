@@ -62,7 +62,7 @@ const AboutSection = () => {
             <div className="about-quote">
               <span className="quote-icon">&#10077;</span>
               <p className="quote-text">
-                "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan kebijaksanaan"
+                "We are drowning in data but starving for wisdom / Kita tenggelam akan data tapi haus akan pengetahuan"
               </p>
               <span className="quote-author">— John Naisbitt</span>
             </div>
