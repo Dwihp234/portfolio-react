@@ -31,13 +31,29 @@ const SCMGallery = () => {
         <p className="section-subtitle">
           Knowing your current position is crucial for determining future direction and strategy. Integrated, accessible, and up-to-date data is the key to continuous improvement and even shifting to new opportunities. This is the importance of visualization, integration, and data analytics. One example is the web design we created to integrate all types of cross-departmental data, both current and historical, to support better and more targeted decision making.
         </p>
+        <div className="scm-puzzle-anim-container">
+          {/* Animasi puzzle orbit */}
+          <img src="/gallery/scm/piece1.png" className="scm-puzzle-anim piece1" alt="Puzzle 1" />
+          <img src="/gallery/scm/piece2.png" className="scm-puzzle-anim piece2" alt="Puzzle 2" />
+          <img src="/gallery/scm/piece3.png" className="scm-puzzle-anim piece3" alt="Puzzle 3" />
+          <img src="/gallery/scm/piece4.png" className="scm-puzzle-anim piece4" alt="Puzzle 4" />
+          {/* <img src="/gallery/scm/piece5.png" className="scm-puzzle-anim piece5" alt="Puzzle 5" /> */}
+          <img src="/gallery/scm/puzzle.png" className="scm-puzzle-main" alt="Puzzle Main" />
+        </div>
         <div style={{textAlign: 'center', margin: '32px 0'}}>
           <img src="/gallery/scm/puzzle.png" alt="Puzzle Data" style={{maxWidth: '220px', marginBottom: '16px'}} />
-          <div style={{fontSize: '1.1em', color: '#e11d48', fontWeight: 500}}>
+          <div style={{fontSize: '1.1em', color: '#9d4285ff', fontWeight: 500}}>
             Don't let the data on every computer remain like a conventional typewriter.<br/>
             It's time to connect all data in real time and simulate for better control.
-          </div>
+            </div>
+            
         </div>
+
+        {/* /* tambahkan piece10 disini */}
+        
+
+
+
         <div className="scm-gallery-grid-3x3">
           {images.map((img, idx) => (
             <div key={idx} className={`scm-gallery-card${img.src ? '' : ' scm-gallery-card-empty'}`}

@@ -241,7 +241,7 @@ const Experience = () => {
 				<h2 className="section-title">Work Experience</h2>
 				<div className="experience-highlights">
 					<h3>Career Progression Highlights</h3>
-					<div className="highlights-grid">
+					<div className="highlights-grid" style={{display: 'flex', flexWrap: 'nowrap', gap: '32px', justifyContent: 'center'}}>
 						<div className="highlight-item">
 							<div className="highlight-icon">
 								<i className="fas fa-user-tie"></i>
