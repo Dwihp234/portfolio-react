@@ -77,12 +77,6 @@ const HeroSection = () => {
               <i className="fas fa-download"></i>
               Download CV
             </button>
-            <button className="btn-secondary" onClick={() => {
-              document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-            }}>
-              <i className="fas fa-user"></i>
-              Learn More
-            </button>
           </div>
         </div>
         
