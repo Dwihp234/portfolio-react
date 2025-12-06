@@ -9,27 +9,34 @@ const Projects = () => {
       id: 5,
       title: "Supply Chain Management Department",
       description: "Import Operations, Expedition Management, Procurement Analytics, and Multi-modal Transportation coordination for Sebuku Island operations using enterprise systems and business intelligence tools.",
-      image: "/images/scm-expedition-management.jpg", // Update with actual image path if available
+
+      image: "/gallery/SCM/SCM-01.jpg", // path benar untuk public folder
+      
+
       technologies: ["Power BI", "SAP", "Dynamics AX", "Excel", "RKAB System"],
       category: "analytics",
       githubLink: "#", // Update with actual GitHub link if available
       liveLink: "#", // Update with actual live demo link if available
-      extra: {
-        keyOperations: [
-          "Master List & Tax Exemption",
-          "Sebuku Island Logistics",
-          "LCT & Barge Operations",
-          "Procurement KPI Management",
-          "Import Documentation",
-          "RKAB Budgeting & Reporting"
-        ]
-      }
+      // extra: {
+      //   keyOperations: [
+      //     "Master List & Tax Exemption",
+      //     "Sebuku Island Logistics",
+      //     "LCT & Barge Operations",
+      //     "Procurement KPI Management",
+      //     "Import Documentation",
+      //     "RKAB Budgeting & Reporting"
+      //   ]
+      // }
     },
     {
       id: 6,
       title: "Heavy Equipment Analytics Dashboard",
       description: "Real-time analytics dashboard for monitoring, analyzing, and optimizing heavy equipment operations to achieve significant cost reduction and efficiency improvement.",
       image: "/api/placeholder/400/250",
+
+      image: "/gallery/SCM/RM-01.png", // path benar sesuai file di public
+
+
       technologies: ["R", "Shiny", "MySQL", "D3.js"],
       category: "visualization",
       githubLink: "#",
@@ -90,9 +97,7 @@ const Projects = () => {
           {filteredProjects.map(project => (
             <div key={project.id} className="project-card">
               <div className="project-image">
-                <div className="image-placeholder">
-                  <span>Project Image</span>
-                </div>
+                <img src={project.image} alt={project.title} className="project-img" />
                 <div className="project-overlay">
                   <div className="project-links">
                     <a href={project.githubLink} className="project-link github">

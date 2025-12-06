@@ -22,6 +22,7 @@ function App() {
         <HeroSection />
         <About />
         <SkillSection />
+        <Experience />
         <Projects />
         <SCMGallery />
         <Gallery />

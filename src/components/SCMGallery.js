@@ -46,14 +46,25 @@ const SCMGallery = () => {
           <div style={{fontSize: '1.1em', color: '#9d4285ff', fontWeight: 500}}>
             Don't let the data on every computer remain like a conventional typewriter.<br/>
             It's time to connect all data in real time and simulate for better control.<br/>
+
+
             
             <br/>Let's utilize historical and current data into many useful things together.<br/>
-            {/* tambahakan kata "mari gunakan data historis dan saat ini menajadi banyak
-            hal yang bermanfaat bersama kami
-            " // ketikann kodenya dibawah ini */}
+            <br/> My vision is to help businesses and organizations harness the power of data to drive informed decision-making, optimize operations, and achieve sustainable growth through innovative data solutions.
+          </div>
+          <div style={{fontSize: '0.95em', color: '#6b7280', marginTop: '12px'}}>
+            "Mari gunakan data historis dan saat ini menjadi banyak hal yang bermanfaat bersama.
+          </div>
+          <div style={{fontSize: '0.95em', color: '#6b7280', marginTop: '4px', fontStyle: 'italic'  }}>
+            Visi saya adalah membantu bisnis dan organisasi memanfaatkan kekuatan data untuk mendorong pengambilan keputusan yang tepat, mengoptimalkan operasi, dan mencapai pertumbuhan berkelanjutan melalui solusi data yang inovatif."  <br/>
+          </div>
+          <br/>
+          <br/>
+          <div style={{marginTop: '8px', fontWeight: '600', color: '#061731ff'}}>
+            Contoh dashboard SCM terintegrasi di bawah ini adalah salah satu wujud nyata dari visi tersebut.<br/>
+            Menggabungkan berbagai data dari berbagai departemen untuk mendukung pengambilan keputusan yang lebih baik dan terarah.
 
-
-            </div>
+          </div>
             
         </div>
 
