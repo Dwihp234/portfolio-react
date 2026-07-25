@@ -115,7 +115,7 @@ const Gallery = () => {
       folder: "SCM",
       images: [
         "/gallery/SCM/PRPO1.png",
-        "/gallery/SCM/expedition-management.jpg",
+        "/gallery/SCM/PR02.png",
         "/gallery/SCM/procurement-analytics.jpg",
         "/gallery/SCM/sebuku-logistics.jpg",
         "/gallery/SCM/customs-clearance.jpg",
@@ -276,7 +276,7 @@ const Gallery = () => {
             </div>
           </div>
 
-          <div className="images-grid scm-gallery">
+          <div className="images-grid scm-gallery scm-gallery-3col">
             {galleryData[1].images.map((image, index) => (
               <div key={index} className="image-item scm-item">
                 <div className="scm-image-container" onClick={() => openImageModal(image, getImageTitle(image))}>
