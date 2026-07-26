@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Dwi Hery Purnomo</title>
     <style>
+
+        .skills-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 kolom sejajar */
+            gap: 20px;
+            margin-top: 15px;
+            }
+
+            .skill-category {
+            background-color: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            }
+
+            .skill-category h4 {
+            color: #0A3D62;
+            border-bottom: 2px solid #176f95;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            }
+
+
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -26,11 +50,14 @@
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
-        .header h1 {
+       .header h1 {
             color: #1e293b;
             margin: 0;
             font-size: 2.5em;
+            font-style: italic;
+            font-family: 'Times New Roman', serif; /* nuansa latin klasik */
         }
+
         .header h2 {
             color: #64748b;
             margin: 5px 0;
@@ -153,46 +180,73 @@
                             My Portofolio Project Site : <a href="https://dwi.dwihpjavas.id" target="_blank" style="color:#2563eb; text-decoration:underline;">dwi.dwihpjavas.id</a>
                         </span>
                     </div> -->
-                    <h1>Head of SCM Department </h1>
-                    <h2>Dwi Hery Purnomo</h2>
-                    <h2>Master of Management (M.M)</h2>
+                  
+                   <h1 style="font-style: italic; font-family: 'Times New Roman', serif; color:#0A3D62;">Dwi Hery Purnomo, M.M.</h1>
+
+
+                    <!-- <h2>Master of Management (M.M)</h2> -->
+                    <!-- <h1>Head of SCM Department </h1> -->
                     <div class="contact-info">
-                                                <span>
-                                                    📧 <a href="mailto:dwihplanner@gmail.com" style="color:#374151; text-decoration:none; font-weight:600;">dwihplanner@gmail.com</a>
-                                                </span>
-                        
-                        <!-- tambahkan icon wa untuk wa, dan otomatis link  -->
+                        <span>
+                            📧 <a href="mailto:dwihplanner@gmail.com" style="color:#374151; text-decoration:none; font-weight:600;">dwihplanner@gmail.com</a>
+                        </span>
 
-                                                <span>
-                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:18px;vertical-align:middle;margin-right:4px;" />
-                                                    <a href="https://wa.me/6281385639122" style="color:#374151; text-decoration:none; font-weight:600;" target="_blank" rel="noopener noreferrer">+62 813 8563 9122</a>
-                                                </span>
+                        <span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:18px;vertical-align:middle;margin-right:4px;" />
+                            <a href="https://wa.me/6281385639122" style="color:#374151; text-decoration:none; font-weight:600;" target="_blank" rel="noopener noreferrer">+62 813 8563 9122</a>
+                        </span>
 
-                        <span>📍 Jakarta, Indonesia</span>
-                                                <span>
-                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" style="width:18px;vertical-align:middle;margin-right:4px;" />
-                                                    YouTube: <a href="https://www.youtube.com/@dwihpjavas" style="color:#374151; text-decoration:none; font-weight:600;" target="_blank" rel="noopener noreferrer">@dwihpjavas</a>
-                                                </span>
+                        <span>📍 Jl. Kedaung Cluster Mutiara Babelan Tahap 1 Blok A13, North Java, Indonesia</span>
+
+                        <span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" style="width:18px;vertical-align:middle;margin-right:4px;" />
+                            YouTube: <a href="https://www.youtube.com/@dwihpjavas" style="color:#374151; text-decoration:none; font-weight:600;" target="_blank" rel="noopener noreferrer">@dwihpjavas</a>
+                        </span>
+
+                        <span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" style="width:18px;vertical-align:middle;margin-right:4px;" />
+                            LinkedIn: <a href="https://www.linkedin.com/in/dwi-hery-purnomo-s-m-m-m-221777b6/details/experience/" style="color:#374151; text-decoration:none; font-weight:600;" target="_blank" rel="noopener noreferrer">Dwi Hery Purnomo</a>
+                        </span>
                     </div>
+
                 </div>
-                <div style="margin-left: 30px;">
-                    <img src="pictures/profile-photo.jpg" alt="Profile Photo" style="width:130px; height:170px;">
+              <div style="margin-left: 30px; text-align: center;">
+                <img src="pictures/profile-photo.jpg" alt="Profile Photo" style="width:130px; height:150px; display:block; margin:0 auto;">
+                <div style="font-size: 0.8em; color:#555; margin-top:8px; line-height:1.4;">
+                    <span>Date of Birth: 28 Juni 1981</span><br>
+                    <span>Place of Birth: Jakarta, Indonesia</span>
                 </div>
+            </div>
+
             </div>
         </div>
 
         <div class="section">
             <h3>Professional Summary</h3>
-           <section id="professional-summary">
-            <section id="professional-summary">
-            <h2>Professional Summary</h2>
-            <ul>
-                <li><strong>Supply Chain Management:</strong> Extensive experience managing end-to-end SCM for mining operations, ensuring seamless integration across procurement, logistics, and inventory.</li>
+
+            <!-- SCM Department -->
+            <section id="scm-summary">
+                <h2>SCM Department</h2>
+                <ul>
+                <li><strong>Supply Chain Management:</strong> Extensive experience managing end-to-end SCM for mining operations, ensuring seamless integration across procurement, logistics, warehousing,shipments and inventory.</li>
                 <li><strong>Expedition Coordination:</strong> Skilled in multimodal transport (sea, land, and air) covering both import and domestic shipments.</li>
                 <li><strong>International & Domestic Routes:</strong> Coordinated complex flows from China to Jakarta, Surabaya, and Banjarmasin, delivering efficiently to Sebuku mining site in South Kalimantan.</li>
                 <li><strong>Leadership:</strong> Oversight of SCM Department from headquarters, supervising Site Logistics, Jakarta Purchasing, Banjarmasin, and Kotabaru divisions.</li>
-            </ul>
+                </ul>
             </section>
+
+            <!-- Heavy Equipment Planner -->
+            <section id="planner-summary">
+                <h2>Heavy Equipment Planner</h2>
+                <ul>
+                <li><strong>Maintenance Planning:</strong> Skilled in scheduling and coordinating heavy equipment and plant machinery maintenance to ensure operational reliability.</li>
+                <li><strong>Equipment Reliability:</strong> Experience in predictive maintenance strategies to reduce downtime and improve efficiency.</li>
+                <li><strong>Technical Coordination:</strong> Worked closely with engineering teams to align maintenance schedules with production targets.</li>
+                <li><strong>Operational Efficiency:</strong> Proven ability to optimize resource allocation and streamline maintenance workflows in mining operations.</li>
+                </ul>
+            </section>
+           
+
 
 
         </div>
@@ -349,63 +403,73 @@
             <div class="experience-item">
                 <div class="position">Bachelor's Degree in System Information (On Due) </div>
                 <div class="company">Universitas Terbuka, Jakarta </div>
+                <p>Currently pursuing a Bachelor's Degree in System Information, focusing on information systems, data management, and technology integration within organizational contexts.</p>
             </div>
         </div>
 
         <div class="section">
-            <h3>Core Competencies</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Leadership &amp; Management</h4>
-                    <ul>
-                        <li>Master of Management (S2)</li>
-                        <li>Strategic Planning &amp; Development</li>
-                        <li>Team Leadership &amp; Supervision</li>
-                        <li>Continuous Improvement</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Operations &amp; Logistics</h4>
-                    <ul>
-                        <li>Procurement &amp; Supply Chain Management</li>
-                        <li>Outbound Logistics Coordination</li>
-                        <li>Heavy Equipment &amp; Plant Department</li>
-                        <li>Import Operations &amp; Handling</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Data Analytics &amp; Technology</h4>
-                    <ul>
-                        <li>R Programming (Statistical Analysis)</li>
-                        <li>Microsoft Power Query &amp; Power BI</li>
-                        <li>Predictive Maintenance Analytics</li>
-                        <li>Microsoft Office Suite &amp; Power Pivot</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Industry Expertise</h4>
-                    <ul>
-                        <li>Mining Operations &amp; Management</li>
-                        <li>Maintenance Planning &amp; Supervision</li>
-                        <li>Equipment Reliability Management</li>
-                        <li>Dynamics AX (Microsoft ERP)</li>
-                    </ul>
-                </div>
+            
+
+
+        <h3>Core Competencies</h3>
+        <div class="skills-row">
+            <div class="skill-category">
+                <h4>Leadership &amp; Management</h4>
+                <ul>
+                    <li>Master of Management (S2)</li>
+                    <li>Strategic Planning &amp; Development</li>
+                    <li>Team Leadership &amp; Supervision</li>
+                    <li>Continuous Improvement</li>
+                </ul>
             </div>
+            <div class="skill-category">
+                <h4>Operations &amp; Logistics</h4>
+                <ul>
+                    <li>Procurement &amp; Supply Chain Management</li>
+                    <li>Outbound Logistics Coordination</li>
+                    <li>Heavy Equipment &amp; Plant Department</li>
+                    <li>Import Operations &amp; Handling</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Data Analytics &amp; Technology</h4>
+                <ul>
+                    <li>R Programming (Statistical Analysis)</li>
+                    <li>Microsoft Power Query &amp; Power BI</li>
+                    <li>Predictive Maintenance Analytics</li>
+                    <li>Microsoft Office Suite &amp; Power Pivot</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Industry Expertise</h4>
+                <ul>
+                    <li>Mining Operations &amp; Management</li>
+                    <li>Maintenance Planning &amp; Supervision</li>
+                    <li>Equipment Reliability Management</li>
+                    <li>Dynamics AX (Microsoft ERP)</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
         </div>
 
         <div class="section">
             <h3>Key Achievements</h3>
             <ul>
-                <li>25+ years of progressive career growth from Port Clerk (Level II) to Managerial (Level V)</li>
-                <li>Extensive experience across 12 companies in mining, manufacturing, and logistics</li>
-                <li>Current leadership role as Head of Department at PT. Sebuku Iron Lateritic Ores and Group</li>
+               
+                <li>Developed best-in-class SCM models with advanced purchasing analysis and cost control for material spending</li>
+                <li>Advanced Excel and programming expertise to connect diverse data types across departments, detect anomalies in trends, and support best-in-class management decision-making</li>
                 <li>Expert in transforming raw data into management insights using advanced analytics</li>
-                <li>Proficient in R Programming for statistical analysis and predictive modeling</li>
                 <li>Implemented predictive maintenance strategies reducing equipment downtime</li>
                 <li>Successfully managed complex supply chain operations and procurement processes</li>
+                <li>Designed and implemented optimized predictive maintenance models to enhance equipment reliability and reduce operational costs</li>
+                <li>Proficient in R Programming for statistical analysis and predictive modeling</li>
             </ul>
-        </div>
+            </div>
+
 
         
 
@@ -438,8 +502,24 @@
         </ul>
         </div>
 
-        
-    </div>
+        <div class="section">
+        <h3>Data Analytics Strength</h3>
+         <ul>
+            <li>
+            <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Power Query Icon" width="20" height="20">
+            <strong>Microsoft Office Excel, Power Pivot & Power Query:</strong> Advanced expertise in transforming raw operational data into structured insights for reporting and decision-making.
+            </li>
+            <li>
+            <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="R Programming Icon" width="20" height="20">
+            <strong>R Programming:</strong> Skilled in statistical analysis, regression modeling, and predictive analytics to support mining and supply chain operations.
+            </li>
+            
+           
+        </ul>
+        </div>
+
+
+        </div>
 
 
 
